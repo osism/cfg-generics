@@ -12,17 +12,38 @@
 
   roles:
     - role: osism.hostname
+      tags: hostname
+
     - role: osism.hosts
+      tags: hosts
+
     - role: osism.proxy
+      tags: proxy
+
     - role: osism.resolvconf
+      tags: resolvconf
+
     - role: osism.repository
+      tags: repository
+
     - role: osism.common
+      tags: common
+
     - role: debops.grub
       become: true
+      tags: grub
+
     - role: ANXS.timezone
       become: true
+      tags: timezone
+
     - role: ANXS.utilities
       become: true
+      tags: utilities
+
     - role: osism.docker
+      tags: docker
+
     - role: hardening
       become: true
+      tasg: hardening
