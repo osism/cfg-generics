@@ -1,4 +1,4 @@
+.venv
+id_rsa.operator
 roles
 secrets
-id_rsa.operator
-.venv
