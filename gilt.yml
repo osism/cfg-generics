@@ -2,10 +2,6 @@
 - git: https://github.com/osism/cfg-master.git 
   version: master
   files:
-    - src: .gitignore
-      dst: ./.gitignore
-    - src: requirements.txt
-      dst: ./requirements.txt
     - src: gilt.yml
       dst: ./gilt.yml
     - src: environments/manager/images.yml
