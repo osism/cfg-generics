@@ -46,4 +46,4 @@
 
     - role: hardening
       become: true
-      tasg: hardening
+      tags: hardening
