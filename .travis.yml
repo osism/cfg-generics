@@ -1,0 +1,22 @@
+---
+sudo: false
+
+language: python
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+install:
+  - pip install -r test-requirements.txt
+
+script:
+  - yamllint -c .yamllint.yml environments gilt.yml
+
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#osism"
+    template:
+      - "%{result} %{repository_slug}: %{commit_subject} %{build_url}"
+    skip_join: true
