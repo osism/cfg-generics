@@ -70,6 +70,3 @@
 - name: ANXS.timezone
   src: git+https://github.com/ANXS/timezone.git
   version: master
-
-##########################
-# Additional roles
