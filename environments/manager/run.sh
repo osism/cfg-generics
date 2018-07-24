@@ -13,15 +13,17 @@ shift
 [[ -e playbook-$playbook.yml ]] >/dev/null 2>&1 || { echo >&2 "playbook-$playbook.yml is not a playbook"; exit 1; }
 command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
 
-if [[ ! -e .venv ]]; then
+VENV_PATH=${VENV_PATH:-.venv}
 
-    virtualenv .venv
-    source .venv/bin/activate
+if [[ ! -e $VENV_PATH ]]; then
+
+    virtualenv $VENV_PATH
+    source $VENV_PATH/bin/activate
     pip install -r requirements.txt
 
 else
 
-    source .venv/bin/activate
+    source $VENV_PATH/bin/activate
 
 fi
 
@@ -61,6 +63,6 @@ if [[ $CLEANUP == "true" ]]; then
 
     rm -rf roles
     rm id_rsa.operator
-    rm -rf .venv
+    rm -rf $VENV_PATH
 
 fi
