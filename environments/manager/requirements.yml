@@ -48,6 +48,10 @@
   src: git+https://github.com/osism/ansible-hostname.git
   version: master
 
+- name: osism.cockpit
+  src: git+https://github.com/osism/ansible-cockpit.git
+  version: master
+
 ##########################
 # External roles
 
