@@ -57,20 +57,20 @@
 
 - name: hardening
   src: git+https://github.com/openstack/ansible-hardening.git
-  version: master
+  version: ef1b4170328391d55c3ca94e8183fdd56a229c34
 
 - name: debops.grub
   src: git+https://github.com/debops/ansible-grub.git
-  version: master
+  version: ee3d1c1071bda347d516e14bb3bc614d7d5fb47c
 
 - name: ANXS.apt
   src: git+https://github.com/ANXS/apt.git
-  version: master
+  version: 0c544ce34d193096d43fd828afea54e2a7c091df
 
 - name: ANXS.utilities
   src: git+https://github.com/ANXS/utilities.git
-  version: master
+  version: b078b43445c52231d9925fdcad42e2e7e5ac9dcd
 
 - name: ANXS.timezone
   src: git+https://github.com/ANXS/timezone.git
-  version: master
+  version: 9a77595bf89fc2c255c7c36c18a9cb113911144d
