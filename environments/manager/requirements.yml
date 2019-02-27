@@ -52,6 +52,10 @@
   src: git+https://github.com/osism/ansible-cockpit.git
   version: master
 
+- name: osism.chrony
+  src: git+https://github.com/osism/ansible-chrony.git
+  version: master
+
 ##########################
 # External roles
 
