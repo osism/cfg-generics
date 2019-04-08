@@ -6,75 +6,75 @@
 
 - name: osism.common
   src: git+https://github.com/osism/ansible-common.git
-  version: master
+  version: {{ versions['osism.common'] }}
 
 - name: osism.operator
   src: git+https://github.com/osism/ansible-operator.git
-  version: master
+  version: {{ versions['osism.operator'] }}
 
 - name: osism.configuration
   src: git+https://github.com/osism/ansible-configuration.git
-  version: master
+  version: {{ versions['osism.configuration'] }}
 
 - name: osism.resolvconf
   src: git+https://github.com/osism/ansible-resolvconf.git
-  version: master
+  version: {{ versions['osism.resolvconf'] }}
 
 - name: osism.proxy
   src: git+https://github.com/osism/ansible-proxy.git
-  version: master
+  version: {{ versions['osism.proxy'] }}
 
 - name: osism.repository
   src: git+https://github.com/osism/ansible-repository.git
-  version: master
+  version: {{ versions['osism.repository'] }}
 
 - name: osism.docker
   src: git+https://github.com/osism/ansible-docker.git
-  version: master
+  version: {{ versions['osism.docker'] }}
 
 - name: osism.manager
   src: git+https://github.com/osism/ansible-manager.git
-  version: master
+  version: {{ versions['osism.manager'] }}
 
 - name: osism.network-interfaces
   src: git+https://github.com/osism/ansible-network-interfaces.git
-  version: master
+  version: {{ versions['osism.network-interfaces'] }}
 
 - name: osism.hosts
   src: git+https://github.com/osism/ansible-hosts.git
-  version: master
+  version: {{ versions['osism.hosts'] }}
 
 - name: osism.hostname
   src: git+https://github.com/osism/ansible-hostname.git
-  version: master
+  version: {{ versions['osism.hostname'] }}
 
 - name: osism.cockpit
   src: git+https://github.com/osism/ansible-cockpit.git
-  version: master
+  version: {{ versions['osism.cockpit'] }}
 
 - name: osism.chrony
   src: git+https://github.com/osism/ansible-chrony.git
-  version: master
+  version: {{ versions['osism.chrony'] }}
 
 ##########################
 # External roles
 
 - name: hardening
   src: git+https://github.com/openstack/ansible-hardening.git
-  version: ef1b4170328391d55c3ca94e8183fdd56a229c34
+  version: {{ versions['hardening'] }}
 
 - name: debops.grub
   src: git+https://github.com/debops/ansible-grub.git
-  version: ee3d1c1071bda347d516e14bb3bc614d7d5fb47c
+  version: {{ versions['debops.grub'] }}
 
 - name: ANXS.apt
   src: git+https://github.com/ANXS/apt.git
-  version: 0c544ce34d193096d43fd828afea54e2a7c091df
+  version: {{ versions['ANXS.apt'] }}
 
 - name: ANXS.utilities
   src: git+https://github.com/ANXS/utilities.git
-  version: b078b43445c52231d9925fdcad42e2e7e5ac9dcd
+  version: {{ versions['ANXS.utilities'] }}
 
 - name: ANXS.timezone
   src: git+https://github.com/ANXS/timezone.git
-  version: 9a77595bf89fc2c255c7c36c18a9cb113911144d
+  version: {{ versions['ANXS.timezone'] }}
