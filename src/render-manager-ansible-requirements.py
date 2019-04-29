@@ -13,7 +13,7 @@ REQUIREMENTS_FILENAME = os.environ.get("REQUIREMENTS_FILENAME", "requirements.ym
 # load versions files from release repository
 
 r = requests.get(VERSIONS_URL)
-versions = yaml.load(r.text, Loader=yaml.FullLoader)
+versions = yaml.full_load(r.text)
 
 # prepare jinja2 environment
 
