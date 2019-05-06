@@ -17,5 +17,5 @@
     - src: environments/manager/requirements.*
       dst: environments/manager/
       post_commands:
-        - python render-manager-ansible-requirements.py
+        - python3 render-manager-ansible-requirements.py
         - rm render-manager-ansible-requirements.py
