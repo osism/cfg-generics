@@ -10,8 +10,8 @@
     keypair_dest: "{{ playbook_dir }}/id_rsa.operator"
 
   tasks:
-  - name: Create id_operator.rsa file
-    copy:
-      content: "{{ operator_private_key }}"
-      dest: "{{ keypair_dest }}"
-      mode: 0600
+    - name: Create id_operator.rsa file
+      copy:
+        content: "{{ operator_private_key }}"
+        dest: "{{ keypair_dest }}"
+        mode: 0600
