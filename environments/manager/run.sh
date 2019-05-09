@@ -19,7 +19,7 @@ if [[ ! -e $VENV_PATH ]]; then
 
     virtualenv -e python3 $VENV_PATH
     source $VENV_PATH/bin/activate
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 
 else
 
