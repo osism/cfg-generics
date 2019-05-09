@@ -6,9 +6,12 @@
   connection: local
   gather_facts: false
 
+  vars:
+    keypair_dest: "{{ playbook_dir }}/id_rsa.operator"
+
   tasks:
   - name: Create id_operator.rsa file
     copy:
       content: "{{ operator_private_key }}"
-      dest: "{{ playbook_dir }}/id_rsa.operator"
+      dest: "{{ keypair_dest }}"
       mode: 0600
