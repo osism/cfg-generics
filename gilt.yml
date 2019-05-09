@@ -16,6 +16,8 @@
       dst: environments/manager/
     - src: environments/manager/requirements.*
       dst: environments/manager/
+    - src: environments/manager/Pipfile
+      dst: environments/manager/
       post_commands:
         - python3 render-manager-ansible-requirements.py
         - rm render-manager-ansible-requirements.py
