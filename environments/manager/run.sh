@@ -17,7 +17,7 @@ VENV_PATH=${VENV_PATH:-.venv}
 
 if [[ ! -e $VENV_PATH ]]; then
 
-    virtualenv -e python3 $VENV_PATH
+    virtualenv -p python3 $VENV_PATH
     source $VENV_PATH/bin/activate
     pip3 install -r requirements.txt
 
