@@ -63,10 +63,6 @@
   src: git+https://github.com/openstack/ansible-hardening.git
   version: "{{ versions['hardening'] }}"
 
-- name: debops.grub
-  src: git+https://github.com/debops/ansible-grub.git
-  version: "{{ versions['debops.grub'] }}"
-
 - name: ANXS.apt
   src: git+https://github.com/ANXS/apt.git
   version: "{{ versions['ANXS.apt'] }}"

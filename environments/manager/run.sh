@@ -37,6 +37,13 @@ if [[ ! -e roles ]]; then
 
     ansible-galaxy install -f -r requirements.yml
 
+    # https://stackoverflow.com/a/122340/99834
+    lib=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+
+    cp -r $lib/debops/ansible/roles/debops.grub roles/
+    cp -r $lib/debops/ansible/roles/debops.secret roles/
+    cp -r $lib/debops/ansible/roles/debops.ansible_plugins roles/
+
 fi
 
 if [[ ! -e id_rsa.operator ]]; then
