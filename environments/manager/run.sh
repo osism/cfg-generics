@@ -51,7 +51,7 @@ if [[ ! -e id_rsa.operator ]]; then
     ansible-playbook \
         -i localhost, \
         -e @../secrets.yml \
-        playbook-keypair.yml
+        playbook-keypair.yml "$@"
 
 fi
 
