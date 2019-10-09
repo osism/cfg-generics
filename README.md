@@ -5,5 +5,5 @@
 ## Usage
 
 ```
-MANAGER_VERSION=2019.2.0 gilt overlay
+MANAGER_VERSION=2019.4.0 gilt overlay
 ```
