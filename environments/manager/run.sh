@@ -45,6 +45,7 @@ if [[ ! -e roles ]]; then
     cp -r $lib/debops/ansible/roles/debops.grub roles/
     cp -r $lib/debops/ansible/roles/debops.kmod roles/
     cp -r $lib/debops/ansible/roles/debops.locales roles/
+    cp -r $lib/debops/ansible/roles/debops.python roles/
     cp -r $lib/debops/ansible/roles/debops.rsyslog roles/
     cp -r $lib/debops/ansible/roles/debops.secret roles/
     cp -r $lib/debops/ansible/roles/debops.sysctl roles/
