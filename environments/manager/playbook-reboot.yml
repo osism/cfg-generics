@@ -4,6 +4,7 @@
 - name: Reboot manager systems
   hosts: manager
   become: true
+  gather_facts: false
 
   tasks:
     - name: Reboot system
