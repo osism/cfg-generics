@@ -40,15 +40,17 @@ if [[ ! -e roles ]]; then
     # https://stackoverflow.com/a/122340/99834
     lib=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
 
-    cp -r $lib/debops/ansible/roles/debops.ansible_plugins roles/
-    cp -r $lib/debops/ansible/roles/debops.environment roles/
-    cp -r $lib/debops/ansible/roles/debops.grub roles/
-    cp -r $lib/debops/ansible/roles/debops.kmod roles/
-    cp -r $lib/debops/ansible/roles/debops.locales roles/
-    cp -r $lib/debops/ansible/roles/debops.python roles/
-    cp -r $lib/debops/ansible/roles/debops.rsyslog roles/
-    cp -r $lib/debops/ansible/roles/debops.secret roles/
-    cp -r $lib/debops/ansible/roles/debops.sysctl roles/
+    cp -r $lib/debops/ansible/roles/ansible_plugins roles/debops.ansible_plugins
+    cp -r $lib/debops/ansible/roles/ansible_plugins roles/ansible_plugins
+    cp -r $lib/debops/ansible/roles/environment roles/debops.environment
+    cp -r $lib/debops/ansible/roles/grub roles/debops.grub
+    cp -r $lib/debops/ansible/roles/kmod roles/debops.kmod
+    cp -r $lib/debops/ansible/roles/locales roles/debops.locales
+    cp -r $lib/debops/ansible/roles/python roles/debops.python
+    cp -r $lib/debops/ansible/roles/rsyslog roles/debops.rsyslog
+    cp -r $lib/debops/ansible/roles/secret roles/debops.secret
+    cp -r $lib/debops/ansible/roles/secret roles/secret
+    cp -r $lib/debops/ansible/roles/sysctl roles/debops.sysctl
 
 fi
 
