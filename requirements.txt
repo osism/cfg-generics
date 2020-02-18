@@ -2,3 +2,4 @@ Jinja2
 PyYAML
 python-gilt
 requests
+ruamel.yaml
