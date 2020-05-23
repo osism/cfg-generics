@@ -18,7 +18,7 @@ if MANAGER_VERSION in ["latest"]:
     with open("images.yml") as fp:
         images = yaml.load(fp)
 
-    images['ceph_ansible_tag'] = "{{ ceph_version|default('luminous') }}"
+    images['ceph_ansible_tag'] = "{{ ceph_version|default('nautilus') }}"
     images['kolla_ansible_tag'] = "{{ openstack_version|default('train') }}"
 
     # write images file
