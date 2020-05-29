@@ -6,3 +6,9 @@
 
   roles:
     - role: osism.docker
+
+- name: Apply role osism.docker-compose
+  hosts: manager
+
+  roles:
+    - role: osism.docker-compose

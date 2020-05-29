@@ -32,6 +32,10 @@
   src: git+https://github.com/osism/ansible-docker.git
   version: "{{ versions['osism.docker'] }}"
 
+- name: osism.docker-compose
+  src: git+https://github.com/osism/ansible-docker-compose.git
+  version: "{{ versions['osism.docker-compose'] }}"
+
 - name: osism.manager
   src: git+https://github.com/osism/ansible-manager.git
   version: "{{ versions['osism.manager'] }}"
