@@ -40,9 +40,9 @@
   src: git+https://github.com/osism/ansible-manager.git
   version: "{{ versions['osism.manager'] }}"
 
-- name: osism.network-interfaces
-  src: git+https://github.com/osism/ansible-network-interfaces.git
-  version: "{{ versions['osism.network-interfaces'] }}"
+- name: osism.network
+  src: git+https://github.com/osism/ansible-network.git
+  version: "{{ versions['osism.network'] }}"
 
 - name: osism.hosts
   src: git+https://github.com/osism/ansible-hosts.git
