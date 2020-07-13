@@ -1,5 +1,5 @@
 ---
-- git: https://github.com/osism/cfg-master.git
+- git: https://github.com/osism/cfg-generics.git
   version: master
   files:
     - src: src/render-manager-ansible-requirements.py

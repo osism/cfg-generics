@@ -1,6 +1,6 @@
-# Configuration master files
+# Configuration generic files
 
-[![Build Status](https://travis-ci.org/osism/cfg-master.svg?branch=master)](https://travis-ci.org/osism/cfg-master)                                                                                                          
+[![Build Status](https://travis-ci.org/osism/cfg-generics.svg?branch=master)](https://travis-ci.org/osism/cfg-generics)                                                                                                          
 
 ## Usage
 
