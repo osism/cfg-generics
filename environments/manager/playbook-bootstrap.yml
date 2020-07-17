@@ -46,7 +46,3 @@
 
     - role: osism.chrony
       tags: chrony
-
-    - role: hardening
-      become: true
-      tags: hardening

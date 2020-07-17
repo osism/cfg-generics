@@ -63,10 +63,6 @@
 ##########################
 # External roles
 
-- name: hardening
-  src: git+https://github.com/openstack/ansible-hardening.git
-  version: "{{ versions['hardening'] }}"
-
 - name: ANXS.apt
   src: git+https://github.com/ANXS/apt.git
   version: "{{ versions['ANXS.apt'] }}"
