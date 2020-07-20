@@ -41,8 +41,5 @@
     - role: osism.docker-compose
       tags: docker
 
-    - role: osism.cockpit
-      tags: cockpit
-
     - role: osism.chrony
       tags: chrony

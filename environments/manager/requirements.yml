@@ -52,10 +52,6 @@
   src: git+https://github.com/osism/ansible-hostname.git
   version: "{{ versions['osism.hostname'] }}"
 
-- name: osism.cockpit
-  src: git+https://github.com/osism/ansible-cockpit.git
-  version: "{{ versions['osism.cockpit'] }}"
-
 - name: osism.chrony
   src: git+https://github.com/osism/ansible-chrony.git
   version: "{{ versions['osism.chrony'] }}"
