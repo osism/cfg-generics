@@ -21,9 +21,9 @@
     - src: environments/manager/Pipfile
       dst: environments/manager/
     - src: inventory/51-ceph
-      dest: inventory/51-ceph
+      dst: inventory/
     - src: inventory/51-kolla
-      dest: inventory/51-kolla
+      dst: inventory/
       post_commands:
         - python3 render-manager-ansible-requirements.py
         - python3 prepare-manager-images.py
