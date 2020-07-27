@@ -8,10 +8,8 @@ cache:
 
 install:
   - pip install -r requirements.txt
-  - pip install -r test-requirements.txt
 
 script:
-  - yamllint -c .yamllint.yml environments gilt.yml
   - gilt overlay
 
 notifications:
