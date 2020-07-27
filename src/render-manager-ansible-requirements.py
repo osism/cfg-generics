@@ -7,8 +7,14 @@ import yaml
 # get environment parameters
 
 MANAGER_VERSION = os.environ.get("MANAGER_VERSION", "latest")
-VERSIONS_URL = os.environ.get("VERSIONS_URL", "https://raw.githubusercontent.com/osism/release/master/%s/base.yml" % MANAGER_VERSION)
-REQUIREMENTS_FILENAME = os.environ.get("REQUIREMENTS_FILENAME", "requirements.yml")
+VERSIONS_URL = os.environ.get(
+    "VERSIONS_URL",
+    "https://raw.githubusercontent.com/osism/release/master/%s/base.yml" % MANAGER_VERSION  # noqa E501
+)
+REQUIREMENTS_FILENAME = os.environ.get(
+    "REQUIREMENTS_FILENAME",
+    "requirements.yml"
+)
 
 # load versions files from release repository
 
@@ -17,7 +23,9 @@ versions = yaml.full_load(r.text)
 
 # prepare jinja2 environment
 
-loader = jinja2.FileSystemLoader(searchpath=os.path.dirname(REQUIREMENTS_FILENAME))
+loader = jinja2.FileSystemLoader(
+    searchpath=os.path.dirname(REQUIREMENTS_FILENAME)
+)
 environment = jinja2.Environment(loader=loader)
 
 # render requirements.yml
