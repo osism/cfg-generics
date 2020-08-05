@@ -2,10 +2,6 @@
 - git: https://github.com/osism/cfg-generics.git
   version: master
   files:
-    - src: inventory/51-ceph
-      dst: inventory/
-    - src: inventory/51-kolla
-      dst: inventory/
     - src: src/render-manager-ansible-requirements.py
       dst: ./environments/manager/render-manager-ansible-requirements.py
     - src: src/prepare-manager-images.py
