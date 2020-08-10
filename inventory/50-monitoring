@@ -2,10 +2,10 @@
 # environment: monitoring
 
 [netdata:children]
-global
+generic
 
 [zabbix-agent:children]
-global
+generic
 
 [zabbix:children]
 monitoring

@@ -10,7 +10,7 @@ elasticsearch
 kibana
 
 [docker:children]
-global
+generic
 
 [podman:children]
 manager
