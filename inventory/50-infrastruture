@@ -1,6 +1,12 @@
 ##########################################################
 # environment: infrastructure
 
+[dragonfly_client]
+generic
+
+[dragonfly_server]
+manager
+
 [helper:children]
 manager
 
@@ -14,6 +20,9 @@ manager
 manager
 
 [patchman:children]
+manager
+
+[phpmyadmin:children]
 manager
 
 [pulp:children]
