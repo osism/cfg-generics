@@ -1,10 +1,10 @@
 ##########################################################
 # environment: infrastructure
 
-[dragonfly_client]
+[dragonfly_client:children]
 generic
 
-[dragonfly_server]
+[dragonfly_server:children]
 manager
 
 [helper:children]
