@@ -14,3 +14,9 @@ generic
 
 [podman:children]
 manager
+
+[hddtemp:children]
+generic
+
+[smartd:children]
+generic
