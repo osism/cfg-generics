@@ -1,6 +1,9 @@
 ##########################################################
 # environment: infrastructure
 
+[adminer:children]
+manager
+
 [dragonfly_client:children]
 generic
 
