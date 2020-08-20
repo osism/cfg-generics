@@ -13,6 +13,9 @@ manager
 [helper:children]
 manager
 
+[keycloak:children]
+manager
+
 [mirror:children]
 manager
 
