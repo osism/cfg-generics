@@ -8,33 +8,9 @@
   src: git+https://github.com/osism/ansible-common.git
   version: "{{ versions['osism.common'] }}"
 
-- name: osism.operator
-  src: git+https://github.com/osism/ansible-operator.git
-  version: "{{ versions['osism.operator'] }}"
-
-- name: osism.configuration
-  src: git+https://github.com/osism/ansible-configuration.git
-  version: "{{ versions['osism.configuration'] }}"
-
-- name: osism.resolvconf
-  src: git+https://github.com/osism/ansible-resolvconf.git
-  version: "{{ versions['osism.resolvconf'] }}"
-
-- name: osism.proxy
-  src: git+https://github.com/osism/ansible-proxy.git
-  version: "{{ versions['osism.proxy'] }}"
-
-- name: osism.repository
-  src: git+https://github.com/osism/ansible-repository.git
-  version: "{{ versions['osism.repository'] }}"
-
 - name: osism.docker
   src: git+https://github.com/osism/ansible-docker.git
   version: "{{ versions['osism.docker'] }}"
-
-- name: osism.docker-compose
-  src: git+https://github.com/osism/ansible-docker-compose.git
-  version: "{{ versions['osism.docker-compose'] }}"
 
 - name: osism.manager
   src: git+https://github.com/osism/ansible-manager.git
@@ -44,18 +20,6 @@
   src: git+https://github.com/osism/ansible-network.git
   version: "{{ versions['osism.network'] }}"
 
-- name: osism.hosts
-  src: git+https://github.com/osism/ansible-hosts.git
-  version: "{{ versions['osism.hosts'] }}"
-
-- name: osism.hostname
-  src: git+https://github.com/osism/ansible-hostname.git
-  version: "{{ versions['osism.hostname'] }}"
-
-- name: osism.chrony
-  src: git+https://github.com/osism/ansible-chrony.git
-  version: "{{ versions['osism.chrony'] }}"
-
 ##########################
 # External roles
 
@@ -63,10 +27,10 @@
   src: git+https://github.com/ANXS/apt.git
   version: "{{ versions['ANXS.apt'] }}"
 
-- name: ANXS.utilities
-  src: git+https://github.com/ANXS/utilities.git
-  version: "{{ versions['ANXS.utilities'] }}"
-
 - name: ANXS.timezone
   src: git+https://github.com/ANXS/timezone.git
   version: "{{ versions['ANXS.timezone'] }}"
+
+- name: ANXS.utilities
+  src: git+https://github.com/ANXS/utilities.git
+  version: "{{ versions['ANXS.utilities'] }}"

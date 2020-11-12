@@ -6,4 +6,4 @@
   become: true
 
   roles:
-  - role: osism.network
+    - role: osism.network

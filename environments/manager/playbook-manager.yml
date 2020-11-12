@@ -5,4 +5,4 @@
   hosts: manager
 
   roles:
-  - role: osism.manager
+    - role: osism.manager

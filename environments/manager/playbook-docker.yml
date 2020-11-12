@@ -7,8 +7,11 @@
   roles:
     - role: osism.docker
 
-- name: Apply role osism.docker-compose
+- name: Apply role docker-compose
   hosts: manager
 
+  collections:
+    - osism.commons
+
   roles:
-    - role: osism.docker-compose
+    - role: docker_compose

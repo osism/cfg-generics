@@ -58,6 +58,9 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
     cp -rf $lib/debops/ansible/roles/secret roles/secret
     cp -rf $lib/debops/ansible/roles/sysctl roles/debops.sysctl
 
+    ansible-galaxy collection install -v https://github.com/osism/ansible-collection-commons.git
+    ansible-galaxy collection install -v https://github.com/osism/ansible-collection-services.git
+
 fi
 
 if [[ ! -e id_rsa.operator ]]; then
