@@ -4,20 +4,24 @@
 - name: Bootstrap nodes
   hosts: manager
 
+  collections:
+    - osism.commons
+    - osism.services
+
   roles:
-    - role: osism.hostname
+    - role: hostname
       tags: hostname
 
-    - role: osism.hosts
+    - role: hosts
       tags: hosts
 
-    - role: osism.proxy
+    - role: proxy
       tags: proxy
 
-    - role: osism.resolvconf
+    - role: resolvconf
       tags: resolvconf
 
-    - role: osism.repository
+    - role: repository
       tags: repository
 
     - role: osism.common
@@ -38,8 +42,8 @@
     - role: osism.docker
       tags: docker
 
-    - role: osism.docker-compose
+    - role: docker_compose
       tags: docker
 
-    - role: osism.chrony
+    - role: chrony
       tags: chrony
