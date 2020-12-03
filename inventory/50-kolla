@@ -10,6 +10,9 @@
 [storage:children]
 control
 
+[bifrost:children]
+manager
+
 [common:children]
 control
 network
