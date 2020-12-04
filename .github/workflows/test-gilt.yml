@@ -1,0 +1,20 @@
+---
+name: Test gilt
+
+on:  # yamllint disable-line rule:truthy
+  - push
+  - pull_request
+
+jobs:
+
+  test-gilt:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - run: pip3 install -r requirements.txt
+      - run: gilt overlay
