@@ -405,10 +405,10 @@ compute
 common
 
 [fluentd:children]
-common
+generic
 
 [kolla-logs:children]
-common
+generic
 
 [kolla-toolbox:children]
 common
