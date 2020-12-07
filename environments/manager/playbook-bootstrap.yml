@@ -24,7 +24,37 @@
     - role: repository
       tags: repository
 
-    - role: osism.common
+    - role: systohc
+      tags: common
+
+    - role: configfs
+      tags: common
+
+    - role: packages
+      tags: common
+
+    - role: sysctl
+      tags: common
+
+    - role: services
+      tags: common
+
+    - role: facts
+      tags: common
+
+    - role: motd
+      tags: common
+
+    - role: hddtemp
+      tags: common
+
+    - role: rng
+      tags: common
+
+    - role: smartd
+      tags: common
+
+    - role: cleanup
       tags: common
 
     - role: debops.grub
