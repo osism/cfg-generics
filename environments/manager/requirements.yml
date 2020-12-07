@@ -22,7 +22,3 @@ roles:
   - name: ANXS.utilities
     src: git+https://github.com/ANXS/utilities.git
     version: "{{ versions['ANXS.utilities'] }}"
-
-  - name: osism.network
-    src: git+https://github.com/osism/ansible-network.git
-    version: "{{ versions['osism.network'] }}"
