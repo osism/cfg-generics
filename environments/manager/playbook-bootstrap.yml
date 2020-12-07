@@ -24,6 +24,9 @@
     - role: repository
       tags: repository
 
+    - role: rsyslog
+      tags: rsyslog
+
     - role: systohc
       tags: common
 
@@ -69,7 +72,7 @@
       become: true
       tags: utilities
 
-    - role: osism.docker
+    - role: docker
       tags: docker
 
     - role: docker_compose
@@ -77,3 +80,6 @@
 
     - role: chrony
       tags: chrony
+
+    - role: auditd
+      tags: auditd
