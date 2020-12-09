@@ -201,14 +201,6 @@ ironic
 [ironic-pxe:children]
 ironic
 
-# cloudkitty
-
-[cloudkitty-api:children]
-cloudkitty
-
-[cloudkitty-processor:children]
-cloudkitty
-
 # skydive
 
 [skydive-analyzer:children]
