@@ -98,9 +98,6 @@ control
 [ironic:children]
 control
 
-[cloudkitty:children]
-control
-
 [skydive:children]
 manager
 
