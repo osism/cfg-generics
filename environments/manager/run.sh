@@ -43,21 +43,6 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
 
     ansible-galaxy install -f -r requirements.yml
 
-    # https://stackoverflow.com/a/122340/99834
-    lib=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
-
-    cp -rf $lib/debops/ansible/roles/ansible_plugins roles/debops.ansible_plugins
-    cp -rf $lib/debops/ansible/roles/ansible_plugins roles/ansible_plugins
-    cp -rf $lib/debops/ansible/roles/environment roles/debops.environment
-    cp -rf $lib/debops/ansible/roles/grub roles/debops.grub
-    cp -rf $lib/debops/ansible/roles/kmod roles/debops.kmod
-    cp -rf $lib/debops/ansible/roles/locales roles/debops.locales
-    cp -rf $lib/debops/ansible/roles/python roles/debops.python
-    cp -rf $lib/debops/ansible/roles/rsyslog roles/debops.rsyslog
-    cp -rf $lib/debops/ansible/roles/secret roles/debops.secret
-    cp -rf $lib/debops/ansible/roles/secret roles/secret
-    cp -rf $lib/debops/ansible/roles/sysctl roles/debops.sysctl
-
 fi
 
 if [[ ! -e id_rsa.operator ]]; then
@@ -82,7 +67,6 @@ ansible-playbook \
 
 if [[ $CLEANUP == "true" ]]; then
 
-    rm -rf roles
     rm id_rsa.operator
     rm -rf $VENV_PATH
 

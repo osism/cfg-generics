@@ -68,10 +68,6 @@
     - role: cleanup
       tags: common
 
-    - role: debops.grub
-      become: true
-      tags: grub
-
     - role: ANXS.timezone
       become: true
       tags: timezone
