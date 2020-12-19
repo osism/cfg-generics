@@ -68,8 +68,7 @@
     - role: cleanup
       tags: common
 
-    - role: ANXS.timezone
-      become: true
+    - role: timezone
       tags: timezone
 
     - role: ANXS.utilities
