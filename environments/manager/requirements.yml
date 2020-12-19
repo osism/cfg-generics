@@ -14,11 +14,3 @@ roles:
   - name: ANXS.apt
     src: git+https://github.com/ANXS/apt.git
     version: "{{ versions['ANXS.apt'] }}"
-
-  - name: ANXS.timezone
-    src: git+https://github.com/ANXS/timezone.git
-    version: "{{ versions['ANXS.timezone'] }}"
-
-  - name: ANXS.utilities
-    src: git+https://github.com/ANXS/utilities.git
-    version: "{{ versions['ANXS.utilities'] }}"
