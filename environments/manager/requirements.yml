@@ -9,8 +9,3 @@ collections:
   - name: https://github.com/osism/ansible-collection-services.git
     type: git
     version: master
-
-roles:
-  - name: ANXS.apt
-    src: git+https://github.com/ANXS/apt.git
-    version: "{{ versions['ANXS.apt'] }}"
