@@ -6,7 +6,7 @@ INSTALL_ANSIBLE_ROLES=${INSTALL_ANSIBLE_ROLES:-true}
 VENV_PATH=${VENV_PATH:-.venv}
 
 if [[ $# -lt 1 ]]; then
-    echo usage: $0 PLAYBOOK [ANSIBLEARGS...]
+    echo "usage: $0 PLAYBOOK [ANSIBLEARGS...]"
     exit 1
 fi
 
@@ -21,13 +21,15 @@ if [[ ! -x "$(command -v ansible-playbook)" ]]; then
 
         command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
 
-        virtualenv -p python3 $VENV_PATH
-        source $VENV_PATH/bin/activate
+        virtualenv -p python3 "$VENV_PATH"
+        # shellcheck source=/dev/null
+        source "$VENV_PATH/bin/activate"
         pip3 install -r requirements.txt
 
     else
 
-        source $VENV_PATH/bin/activate
+        # shellcheck source=/dev/null
+        source "$VENV_PATH/bin/activate"
 
     fi
 
@@ -62,12 +64,12 @@ ansible-playbook \
     -e @../secrets.yml \
     -e @images.yml \
     -e @configuration.yml \
-    -u $ANSIBLE_USER \
-    playbook-$playbook.yml "$@"
+    -u "$ANSIBLE_USER" \
+    playbook-"$playbook".yml "$@"
 
 if [[ $CLEANUP == "true" ]]; then
 
     rm id_rsa.operator
-    rm -rf $VENV_PATH
+    rm -rf "$VENV_PATH"
 
 fi
