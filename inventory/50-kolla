@@ -21,10 +21,10 @@ storage
 monitoring
 
 [grafana:children]
-monitoring
+control
 
 [influxdb:children]
-monitoring
+control
 
 [kibana:children]
 control
