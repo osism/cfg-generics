@@ -30,7 +30,7 @@ control
 control
 
 [haproxy:children]
-network
+control
 
 [mariadb:children]
 control
