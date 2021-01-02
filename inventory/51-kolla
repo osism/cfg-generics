@@ -241,13 +241,13 @@ aodh
 octavia
 
 [octavia-health-manager:children]
-octavia
+network
 
 [octavia-housekeeping:children]
-octavia
+network
 
 [octavia-worker:children]
-octavia
+network
 
 # barbican
 
