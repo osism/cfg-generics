@@ -309,7 +309,7 @@ designate
 designate
 
 [designate-backend-bind9:children]
-designate
+network
 
 # elasticsearch
 
