@@ -6,7 +6,7 @@ ceph-control
 ceph-resource
 
 [cephclient:children]
-ceph-control
+manager
 
 [ceph-grafana-server:children]
 ceph-control
