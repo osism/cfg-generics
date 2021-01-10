@@ -11,9 +11,6 @@ ceph-control
 [ceph-grafana-server:children]
 ceph-control
 
-[ceph-mds:children]
-ceph-control
-
 [ceph-mgr:children]
 ceph-control
 
@@ -23,10 +20,9 @@ ceph-control
 [ceph-osd:children]
 ceph-resource
 
-[ceph-rgw:children]
-ceph-control
-
 # NOTE: Use the following groups only if these services are deployed.
+
+[ceph-rgw]
 
 [ceph-iscsigw]
 
