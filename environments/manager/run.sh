@@ -15,23 +15,19 @@ shift
 
 [[ -e playbook-$playbook.yml ]] >/dev/null 2>&1 || { echo >&2 "playbook-$playbook.yml is not a playbook"; exit 1; }
 
-if [[ ! -x "$(command -v ansible-playbook)" ]]; then
+if [[ ! -e $VENV_PATH ]]; then
 
-    if [[ ! -e $VENV_PATH ]]; then
+    command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
 
-        command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
+    virtualenv -p python3 "$VENV_PATH"
+    # shellcheck source=/dev/null
+    source "$VENV_PATH/bin/activate"
+    pip3 install -r requirements.txt
 
-        virtualenv -p python3 "$VENV_PATH"
-        # shellcheck source=/dev/null
-        source "$VENV_PATH/bin/activate"
-        pip3 install -r requirements.txt
+else
 
-    else
-
-        # shellcheck source=/dev/null
-        source "$VENV_PATH/bin/activate"
-
-    fi
+    # shellcheck source=/dev/null
+    source "$VENV_PATH/bin/activate"
 
 fi
 
