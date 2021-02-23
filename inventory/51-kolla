@@ -201,6 +201,9 @@ ironic
 [ironic-pxe:children]
 ironic
 
+[ironic-ipxe:children]
+ironic
+
 # skydive
 
 [skydive-analyzer:children]
