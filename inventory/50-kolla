@@ -86,9 +86,6 @@ control
 [mistral:children]
 control
 
-[searchlight:children]
-control
-
 [redis:children]
 control
 
@@ -100,9 +97,6 @@ control
 
 [skydive:children]
 manager
-
-[watcher:children]
-control
 
 [aodh:children]
 control
@@ -127,6 +121,3 @@ control
 
 [prometheus:children]
 monitoring
-
-[zun:children]
-control

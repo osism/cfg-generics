@@ -166,19 +166,6 @@ mistral
 [mistral-engine:children]
 mistral
 
-# mongodb
-
-[mongodb:children]
-control
-
-# searchlight
-
-[searchlight-api:children]
-searchlight
-
-[searchlight-listener:children]
-searchlight
-
 # magnum
 
 [magnum-api:children]
@@ -212,17 +199,6 @@ skydive
 [skydive-agent:children]
 compute
 network
-
-# watcher
-
-[watcher-api:children]
-watcher
-
-[watcher-engine:children]
-watcher
-
-[watcher-applier:children]
-watcher
 
 # aodh
 
@@ -379,20 +355,6 @@ elasticsearch
 
 [prometheus-blackbox-exporter:children]
 monitoring
-
-# zun
-
-[zun-api:children]
-zun
-
-[zun-wsproxy:children]
-zun
-
-[zun-compute:children]
-compute
-
-[zun-cni-daemon:children]
-compute
 
 # common
 
