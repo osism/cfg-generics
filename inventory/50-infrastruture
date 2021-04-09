@@ -16,6 +16,9 @@ manager
 [keycloak:children]
 manager
 
+[minikube:children]
+manager
+
 [mirror:children]
 manager
 
