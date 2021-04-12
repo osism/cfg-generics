@@ -33,19 +33,19 @@ registry_image: "{{ docker_registry }}/library/registry:{{ registry_tag }}"
 
 # image tag depends on CEPH_VERSION or OPENSTACK_VERSION
 
-cephclient_tag: "{{ ceph_version }}"
+cephclient_tag: "{{ ceph_version|default('octopus') }}"
 cephclient_image: "{{ docker_registry_cephclient|default('quay.io') }}/osism/cephclient:{{ cephclient_tag }}"
 
-openstackclient_tag: "{{ openstack_version }}"
+openstackclient_tag: "{{ openstack_version|default('victoria') }}"
 openstackclient_image: "{{ docker_registry_openstackclient|default('quay.io') }}/osism/openstackclient:{{ openstackclient_tag }}"
 
 awx_tag: "{{ awx_version }}"
 awx_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/manager:{{ awx_tag }}"
 
-ceph_ansible_tag: "{{ ceph_version }}"
+ceph_ansible_tag: "{{ ceph_version|default('octopus') }}"
 ceph_ansible_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/ceph-ansible:{{ ceph_ansible_tag }}"
 
-kolla_ansible_tag: "{{ openstack_version }}"
+kolla_ansible_tag: "{{ openstack_version|default('victoria') }}"
 kolla_ansible_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/kolla-ansible:{{ kolla_ansible_tag }}"
 
 osism_ansible_tag: "{{ manager_version }}"
