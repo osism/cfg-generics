@@ -39,7 +39,7 @@ cephclient_image: "{{ docker_registry_cephclient|default('quay.io') }}/osism/cep
 openstackclient_tag: "{{ openstack_version|default('victoria') }}"
 openstackclient_image: "{{ docker_registry_openstackclient|default('quay.io') }}/osism/openstackclient:{{ openstackclient_tag }}"
 
-awx_tag: "{{ awx_version }}"
+awx_tag: "{{ awx_version|default('latest') }}"
 awx_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/manager:{{ awx_tag }}"
 
 ceph_ansible_tag: "{{ ceph_version|default('octopus') }}"
@@ -48,5 +48,5 @@ ceph_ansible_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/ceph
 kolla_ansible_tag: "{{ openstack_version|default('victoria') }}"
 kolla_ansible_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/kolla-ansible:{{ kolla_ansible_tag }}"
 
-osism_ansible_tag: "{{ manager_version }}"
+osism_ansible_tag: "{{ manager_version|default('latest') }}"
 osism_ansible_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/osism-ansible:{{ osism_ansible_tag }}"
