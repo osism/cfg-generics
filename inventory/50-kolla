@@ -121,3 +121,6 @@ control
 
 [prometheus:children]
 monitoring
+
+[senlin:children]
+control
