@@ -37,8 +37,5 @@ manager
 [phpmyadmin:children]
 manager
 
-[pulp:children]
-manager
-
 [ucs:children]
 manager
