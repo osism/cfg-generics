@@ -12,6 +12,9 @@ kibana
 [docker:children]
 generic
 
+[kompose:children]
+manager
+
 [podman:children]
 manager
 
