@@ -124,3 +124,13 @@ monitoring
 
 [senlin:children]
 control
+
+[monasca-agent:children]
+compute
+control
+monitoring
+network
+storage
+
+[monasca:children]
+monitoring
