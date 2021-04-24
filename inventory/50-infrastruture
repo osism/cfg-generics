@@ -39,3 +39,6 @@ manager
 
 [ucs:children]
 manager
+
+[rundeck:children]
+manager
