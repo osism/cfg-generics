@@ -23,9 +23,6 @@ monitoring
 [grafana:children]
 control
 
-[influxdb:children]
-control
-
 [kibana:children]
 control
 
@@ -140,3 +137,6 @@ control
 
 [zookeeper:children]
 control
+
+[influxdb:children]
+monitoring
