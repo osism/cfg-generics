@@ -137,3 +137,6 @@ monitoring
 
 [kafka:children]
 control
+
+[zookeeper:children]
+control
