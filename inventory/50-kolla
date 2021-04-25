@@ -134,3 +134,6 @@ storage
 
 [monasca:children]
 monitoring
+
+[kafka:children]
+control
