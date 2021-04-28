@@ -143,3 +143,6 @@ monitoring
 
 [storm:children]
 monitoring
+
+[trove:children]
+control

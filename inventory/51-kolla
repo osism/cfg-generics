@@ -426,3 +426,14 @@ storm
 
 [storm-nimbus:children]
 storm
+
+# trove
+
+[trove-api:children]
+trove
+
+[trove-conductor:children]
+trove
+
+[trove-taskmanager:children]
+trove
