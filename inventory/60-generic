@@ -3,13 +3,16 @@
 
 [controller:children]
 control
-mariadb
-rabbitmq
-memcached
 elasticsearch
 kibana
+mariadb
+memcached
+rabbitmq
 
 [docker:children]
+generic
+
+[hddtemp:children]
 generic
 
 [kompose:children]
@@ -17,9 +20,6 @@ manager
 
 [podman:children]
 manager
-
-[hddtemp:children]
-generic
 
 [smartd:children]
 generic

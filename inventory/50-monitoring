@@ -7,8 +7,8 @@ generic
 [openstack_health_monitor:children]
 monitoring
 
-[zabbix_agent:children]
-generic
-
 [zabbix:children]
 monitoring
+
+[zabbix_agent:children]
+generic

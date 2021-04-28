@@ -37,8 +37,8 @@ manager
 [phpmyadmin:children]
 manager
 
-[ucs:children]
+[rundeck:children]
 manager
 
-[rundeck:children]
+[ucs:children]
 manager

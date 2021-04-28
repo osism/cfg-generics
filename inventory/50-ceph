@@ -1,13 +1,6 @@
 ##########################################################
 # environment: ceph
 
-[ceph:children]
-ceph-control
-ceph-resource
-
-[cephclient:children]
-manager
-
 [ceph-grafana-server:children]
 ceph-control
 
@@ -20,9 +13,14 @@ ceph-control
 [ceph-osd:children]
 ceph-resource
 
-# NOTE: Use the following groups only if these services are deployed.
+[ceph:children]
+ceph-control
+ceph-resource
 
-[ceph-rgw]
+[cephclient:children]
+manager
+
+# NOTE: Use the following groups only if these services are deployed.
 
 [ceph-iscsigw]
 
@@ -31,3 +29,5 @@ ceph-resource
 [ceph-nfs]
 
 [ceph-rbdmirror]
+
+[ceph-rgw]
