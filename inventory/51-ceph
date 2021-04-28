@@ -23,11 +23,11 @@ ceph-mon
 [nfss:children]
 ceph-nfs
 
-[rgws:children]
-ceph-rgw
+[osds:children]
+ceph-osd
 
 [rbdmirrors:children]
 ceph-rbdmirror
 
-[osds:children]
-ceph-osd
+[rgws:children]
+ceph-rgw
