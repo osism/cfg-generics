@@ -31,6 +31,15 @@ redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{
 registry_tag: "{{ versions['registry'] }}"
 registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:{{ '{{' }} registry_tag {{ '}}' }}"
 
+awx_tag: "{{ '{{' }} awx_version|default('latest') {{ '}}' }}"
+awx_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['awx'] }}:{{ '{{' }} awx_tag {{ '}}' }}"
+
+osism_ansible_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
+osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images[ 'osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
+
+inventory_reconciler_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
+inventory_reconciler_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['inventory_reconciler'] }}:{{ '{{' }} inventory_reconciler_tag {{ '}}' }}"
+
 # image tag depends on CEPH_VERSION or OPENSTACK_VERSION
 
 cephclient_tag: "{{ '{{' }} ceph_version|default('octopus') {{ '}}' }}"
@@ -39,15 +48,9 @@ cephclient_image: "{{ '{{' }} docker_registry_cephclient|default('quay.io') {{ '
 openstackclient_tag: "{{ '{{' }} openstack_version|default('victoria') {{ '}}' }}"
 openstackclient_image: "{{ '{{' }} docker_registry_openstackclient|default('quay.io') {{ '}}' }}/{{ images['openstackclient'] }}:{{ '{{' }} openstackclient_tag {{ '}}' }}"
 
-awx_tag: "{{ '{{' }} awx_version|default('latest') {{ '}}' }}"
-awx_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['awx'] }}:{{ '{{' }} awx_tag {{ '}}' }}"
-
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default('octopus') {{ '}}' }}"
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default('victoria') {{ '}}' }}"
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
-
-osism_ansible_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
-osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images[ 'osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
 
