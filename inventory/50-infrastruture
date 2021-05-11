@@ -13,6 +13,9 @@ manager
 [helper:children]
 manager
 
+[jenkins:children]
+manager
+
 [keycloak:children]
 manager
 
