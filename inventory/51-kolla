@@ -59,6 +59,14 @@ cinder
 [cinder-volume:children]
 storage
 
+# cloudkitty
+
+[cloudkitty-api:children]
+cloudkitty
+
+[cloudkitty-processor:children]
+cloudkitty
+
 # common
 
 [cron:children]
