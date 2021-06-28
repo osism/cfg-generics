@@ -307,6 +307,9 @@ network
 [octavia-worker:children]
 network
 
+[octavia-driver-agent:children]
+network
+
 # other
 
 [iscsid:children]
