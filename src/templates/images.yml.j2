@@ -39,12 +39,12 @@ inventory_reconciler_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ im
 cephclient_tag: "{{ '{{' }} ceph_version|default('octopus') {{ '}}' }}"
 cephclient_image: "{{ '{{' }} docker_registry_cephclient|default('quay.io') {{ '}}' }}/{{ images['cephclient'] }}:{{ '{{' }} cephclient_tag {{ '}}' }}"
 
-openstackclient_tag: "{{ '{{' }} openstack_version|default('victoria') {{ '}}' }}"
+openstackclient_tag: "{{ '{{' }} openstack_version|default('wallaby') {{ '}}' }}"
 openstackclient_image: "{{ '{{' }} docker_registry_openstackclient|default('quay.io') {{ '}}' }}/{{ images['openstackclient'] }}:{{ '{{' }} openstackclient_tag {{ '}}' }}"
 
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default('octopus') {{ '}}' }}"
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
-kolla_ansible_tag: "{{ '{{' }} openstack_version|default('victoria') {{ '}}' }}"
+kolla_ansible_tag: "{{ '{{' }} openstack_version|default('wallaby') {{ '}}' }}"
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
