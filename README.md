@@ -1,5 +1,7 @@
 # Generic configuration files
 
+## environments/configuration directory
+
 The configuration repository needs to be synchronized regularly with
 this repository to obtain any updates. It contains in particular the
 directory ``environments/manager``, which is needed to initially build
@@ -38,3 +40,11 @@ git diff
 git add .
 git commit
 ```
+
+## inventory directory
+
+The general hostgroups for Ansible available in OSISM are stored in the
+``inventory`` directory. These files are included in the individual
+container images, such as the inventory reconciler. The files in this
+directory are not intended to be included directly in a configuration
+repository.
