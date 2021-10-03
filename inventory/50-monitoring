@@ -6,9 +6,3 @@ generic
 
 [openstack_health_monitor:children]
 monitoring
-
-[zabbix:children]
-monitoring
-
-[zabbix_agent:children]
-generic
