@@ -15,7 +15,7 @@ generic
 [hddtemp:children]
 generic
 
-[heimdall:children]
+[homer:children]
 manager
 
 [kompose:children]
