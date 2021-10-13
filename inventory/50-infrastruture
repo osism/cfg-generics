@@ -48,3 +48,6 @@ manager
 
 [ucs:children]
 manager
+
+[zuul:children]
+manager
