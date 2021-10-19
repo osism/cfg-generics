@@ -48,3 +48,6 @@ manager
 
 [zuul:children]
 manager
+
+[tailscale:children]
+generic
