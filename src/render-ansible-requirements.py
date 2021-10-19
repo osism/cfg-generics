@@ -9,7 +9,7 @@ import yaml
 MANAGER_VERSION = os.environ.get("MANAGER_VERSION", "latest")
 VERSIONS_URL = os.environ.get(
     "VERSIONS_URL",
-    "https://raw.githubusercontent.com/osism/release/master/%s/base.yml" % MANAGER_VERSION  # noqa E501
+    "https://raw.githubusercontent.com/osism/release/main/%s/base.yml" % MANAGER_VERSION  # noqa E501
 )
 REQUIREMENTS_FILENAME = os.environ.get(
     "REQUIREMENTS_FILENAME",
