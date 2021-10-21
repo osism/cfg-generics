@@ -60,6 +60,7 @@ ansible-playbook \
     -e @../secrets.yml \
     -e @images.yml \
     -e @configuration.yml \
+    -e @secrets.yml \
     -u "$ANSIBLE_USER" \
     playbook-"$playbook".yml "$@"
 
