@@ -54,3 +54,6 @@ manager
 
 [nexus:children]
 manager
+
+[boundary:children]
+manager
