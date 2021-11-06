@@ -51,3 +51,6 @@ manager
 
 [tailscale:children]
 manager
+
+[nexus:children]
+manager
