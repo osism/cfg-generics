@@ -7,6 +7,12 @@ adminer_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['adminer'] }}:{{
 ara_server_tag: "{{ versions['ara_server'] }}"
 ara_server_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ara_server'] }}:{{ '{{' }} ara_server_tag {{ '}}' }}"
 
+awx_tag: "{{ versions['awx'] }}"
+awx_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['awx'] }}:{{ '{{' }} awx_tag {{ '}}' }}"
+
+awxclient_tag: "{{ versions['awxclient'] }}"
+awxclient_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['awxclient'] }}:{{ '{{' }} awxclient_tag {{ '}}' }}"
+
 mariadb_tag: "{{ versions['mariadb'] }}"
 mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mariadb'] }}:{{ '{{' }} mariadb_tag {{ '}}' }}"
 
