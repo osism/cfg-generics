@@ -16,7 +16,7 @@ awxclient_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/awxclie
 mariadb_tag: "10.6.5"
 mariadb_image: "{{ docker_registry }}/library/mariadb:{{ mariadb_tag }}"
 
-netbox_tag: "v3.0.9-ldap"
+netbox_tag: "v3.0.10-ldap"
 netbox_image: "{{ docker_registry_ansible|default('quay.io') }}/osism/netbox:{{ netbox_tag }}"
 
 nginx_tag: "1.21.4-alpine"
@@ -42,6 +42,9 @@ inventory_reconciler_image: "{{ docker_registry_ansible }}/osism/inventory-recon
 
 osism_tag: "{{ manager_version|default('latest') }}"
 osism_image: "{{ docker_registry_ansible }}/osism/osism:{{ osism_tag }}"
+
+vault_tag: "{{ versions['vault'] }}"
+vault_image: "{{ docker_registry }}/hashicorp/vault:{{ vault_tag }}"
 
 # image tag depends on CEPH_VERSION or OPENSTACK_VERSION
 
