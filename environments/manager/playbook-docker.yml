@@ -13,11 +13,3 @@
   roles:
     - role: docker
 
-- name: Apply role docker-compose
-  hosts: manager
-
-  collections:
-    - osism.commons
-
-  roles:
-    - role: docker_compose
