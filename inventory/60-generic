@@ -26,3 +26,6 @@ manager
 
 [smartd:children]
 generic
+
+[frr:children]
+generic
