@@ -27,5 +27,7 @@ manager
 [smartd:children]
 generic
 
+[frr:children]
+
 [journald:children]
 generic
