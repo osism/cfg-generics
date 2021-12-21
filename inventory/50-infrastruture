@@ -57,3 +57,6 @@ manager
 
 [boundary:children]
 manager
+
+[traefik:children]
+manager

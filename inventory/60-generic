@@ -28,4 +28,6 @@ manager
 generic
 
 [frr:children]
+
+[journald:children]
 generic
