@@ -6,6 +6,8 @@ name: Check shell syntax
     paths:
       - '**.sh'
       - .github/workflows/check-shell-syntax.yml
+    branches:
+      - main
   pull_request:
     paths:
       - '**.sh'

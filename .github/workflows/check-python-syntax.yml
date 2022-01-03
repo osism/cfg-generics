@@ -6,6 +6,7 @@ name: Check python syntax
     paths:
       - '**.py'
       - .github/workflows/check-python-syntax.yml
+    branches: main
   pull_request:
     paths:
       - '**.py'
