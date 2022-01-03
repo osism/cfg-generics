@@ -60,3 +60,6 @@ manager
 
 [traefik:children]
 manager
+
+[atlantis:children]
+manager

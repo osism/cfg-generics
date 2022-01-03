@@ -29,3 +29,6 @@ generic
 
 [journald:children]
 generic
+
+[clamav:children]
+generic
