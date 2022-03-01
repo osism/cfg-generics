@@ -74,6 +74,9 @@ control
 [kibana:children]
 control
 
+[loadbalancer:children]
+control
+
 [magnum:children]
 control
 
