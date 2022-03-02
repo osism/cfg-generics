@@ -377,7 +377,7 @@ storage
 elasticsearch
 
 [prometheus-haproxy-exporter:children]
-haproxy
+loadbalancer
 
 [prometheus-memcached-exporter:children]
 memcached
