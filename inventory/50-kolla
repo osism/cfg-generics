@@ -48,7 +48,7 @@ storage
 control
 
 [haproxy:children]
-control
+loadbalancer
 
 [heat:children]
 control
