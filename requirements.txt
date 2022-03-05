@@ -2,4 +2,4 @@ Jinja2==3.0.3
 PyYAML==6.0
 python-gilt==1.2.3
 requests==2.27.1
-ruamel.yaml==0.17.20
+ruamel.yaml==0.17.21
