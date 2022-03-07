@@ -55,13 +55,7 @@ manager
 [nexus:children]
 manager
 
-[boundary:children]
-manager
-
 [traefik:children]
-manager
-
-[atlantis:children]
 manager
 
 [dnsdist:children]
