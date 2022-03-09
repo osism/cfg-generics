@@ -49,9 +49,6 @@ manager
 [zuul:children]
 manager
 
-[tailscale:children]
-manager
-
 [nexus:children]
 manager
 
