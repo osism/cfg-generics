@@ -3,7 +3,8 @@ name: Test gilt
 
 "on":
   push:
-    - branches: main
+    branches:
+      - main
 
   pull_request:
 
