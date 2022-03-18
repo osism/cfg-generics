@@ -379,6 +379,9 @@ elasticsearch
 [prometheus-haproxy-exporter:children]
 loadbalancer
 
+[prometheus-libvirt-exporter:children]
+compute
+
 [prometheus-memcached-exporter:children]
 memcached
 
