@@ -4,6 +4,8 @@
   files:
     - src: src/render-ansible-requirements.py
       dst: ./environments/manager/render-ansible-requirements.py
+    - src: src/render-images.py
+      dst: ./environments/manager/render-images.py
     - src: gilt.yml
       dst: ./gilt.yml
     - src: requirements.txt
@@ -20,4 +22,5 @@
       dst: environments/manager/
       post_commands:
         - python3 render-ansible-requirements.py
-        - rm render-ansible-requirements.py
+        - python3 render-images.py
+        - rm render-ansible-requirements.py render-images.py
