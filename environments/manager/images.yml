@@ -45,6 +45,13 @@ osism_tag: "{{ versions['osism'] }}"
 {% endif %}
 osism_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism'] }}:{{ '{{' }} osism_tag {{ '}}' }}"
 
+{% if versions['osism'] == 'latest' -%}
+osism_netbox_tag: "{{ '{{' }} osism_version|default('latest') {{ '}}' }}"
+{%- else -%}
+osism_netbox_tag: "{{ versions['osism'] }}"
+{% endif %}
+osism_netbox_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism_netbox'] }}:{{ '{{' }} osism_netbox_tag {{ '}}' }}"
+
 vault_tag: "{{ versions['vault'] }}"
 vault_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['vault'] }}:{{ '{{' }} vault_tag {{ '}}' }}"
 
