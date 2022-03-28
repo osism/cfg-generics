@@ -3,3 +3,4 @@
 ansible==5.5.0
 debops==3.0.1
 netaddr==0.8.0
+paramiko==2.10.3
