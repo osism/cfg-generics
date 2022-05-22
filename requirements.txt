@@ -1,4 +1,4 @@
-Jinja2==3.1.1
+Jinja2==3.1.2
 PyYAML==6.0
 python-gilt==1.2.3
 requests==2.27.1
