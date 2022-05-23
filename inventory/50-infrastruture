@@ -46,6 +46,9 @@ manager
 [rundeck:children]
 manager
 
+[tang:children]
+manager
+
 [zuul:children]
 manager
 
