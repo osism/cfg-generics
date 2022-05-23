@@ -63,3 +63,7 @@ manager
 
 [cgit:children]
 manager
+
+[clevis:children]
+generic
+
