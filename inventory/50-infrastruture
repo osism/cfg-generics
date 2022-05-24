@@ -49,6 +49,9 @@ manager
 [tang:children]
 manager
 
+[wireguard:children]
+manager
+
 [zuul:children]
 manager
 
