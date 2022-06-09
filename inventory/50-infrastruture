@@ -4,6 +4,15 @@
 [adminer:children]
 manager
 
+[cgit:children]
+manager
+
+[clevis:children]
+generic
+
+[dnsdist:children]
+manager
+
 [dragonfly_client:children]
 generic
 
@@ -31,6 +40,9 @@ manager
 [netbox:children]
 manager
 
+[nexus:children]
+manager
+
 [openldap:children]
 manager
 
@@ -49,24 +61,11 @@ manager
 [tang:children]
 manager
 
+[traefik:children]
+manager
+
 [wireguard:children]
 manager
 
 [zuul:children]
 manager
-
-[nexus:children]
-manager
-
-[traefik:children]
-manager
-
-[dnsdist:children]
-manager
-
-[cgit:children]
-manager
-
-[clevis:children]
-generic
-

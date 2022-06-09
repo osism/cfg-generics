@@ -1,6 +1,12 @@
 ##########################################################
 # environment: generic
 
+[clamav:children]
+generic
+
+[containerd:children]
+generic
+
 [controller:children]
 control
 elasticsearch
@@ -12,11 +18,16 @@ rabbitmq
 [docker:children]
 generic
 
+[frr:children]
+
 [hddtemp:children]
 generic
 
 [homer:children]
 manager
+
+[journald:children]
+generic
 
 [kompose:children]
 manager
@@ -24,19 +35,8 @@ manager
 [podman:children]
 manager
 
-[smartd:children]
-generic
-
-[frr:children]
-
-[journald:children]
-generic
-
-[clamav:children]
-generic
-
 [runc:children]
 generic
 
-[containerd:children]
+[smartd:children]
 generic
