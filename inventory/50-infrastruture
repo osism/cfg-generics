@@ -58,6 +58,9 @@ manager
 [rundeck:children]
 manager
 
+[squid:children]
+manager
+
 [tang:children]
 manager
 
