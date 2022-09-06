@@ -67,20 +67,6 @@ cloudkitty
 [cloudkitty-processor:children]
 cloudkitty
 
-# common
-
-[cron:children]
-common
-
-[fluentd:children]
-generic
-
-[kolla-logs:children]
-generic
-
-[kolla-toolbox:children]
-common
-
 # designate
 
 [designate-api:children]
@@ -128,6 +114,14 @@ gnocchi
 [gnocchi-statsd:children]
 gnocchi
 
+# hacluster
+
+[hacluster-remote:children]
+compute
+
+[hacluster:children]
+control
+
 # heat
 
 [heat-api-cfn:children]
@@ -155,6 +149,9 @@ ironic
 
 [ironic-ipxe:children]
 ironic
+
+[ironic-neutron-agent:children]
+network
 
 [ironic-pxe:children]
 ironic
@@ -235,9 +232,6 @@ monasca
 
 # neutron
 
-[ironic-neutron-agent:children]
-network
-
 [neutron-bgp-dragent:children]
 network
 
@@ -266,11 +260,6 @@ compute
 control
 
 [neutron-vpnaas-agent:children]
-network
-
-[openvswitch:children]
-compute
-manila-share
 network
 
 # nova
@@ -307,6 +296,9 @@ nova
 [octavia-api:children]
 octavia
 
+[octavia-driver-agent:children]
+network
+
 [octavia-health-manager:children]
 network
 
@@ -316,22 +308,12 @@ network
 [octavia-worker:children]
 network
 
-[octavia-driver-agent:children]
+# openvswitch
+
+[openvswitch:children]
+compute
+manila-share
 network
-
-# other
-
-[iscsid:children]
-compute
-ironic-conductor
-storage
-
-[tgtd:children]
-storage
-
-[multipathd:children]
-compute
-storage
 
 # ovn
 
@@ -471,19 +453,39 @@ trove
 [zun-api:children]
 zun
 
-[zun-wsproxy:children]
-zun
+[zun-cni-daemon:children]
+compute
 
 [zun-compute:children]
 compute
 
-[zun-cni-daemon:children]
+[zun-wsproxy:children]
+zun
+
+# common/other
+
+# NOTE: Alphabetical sorting only within this group and not within the whole file.
+
+[cron:children]
+common
+
+[fluentd:children]
+generic
+
+[iscsid:children]
 compute
+ironic-conductor
+storage
 
-# hacluster
+[kolla-logs:children]
+generic
 
-[hacluster:children]
-control
+[kolla-toolbox:children]
+common
 
-[hacluster-remote:children]
+[multipathd:children]
 compute
+storage
+
+[tgtd:children]
+storage
