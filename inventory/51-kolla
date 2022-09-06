@@ -147,6 +147,9 @@ ironic
 [ironic-conductor:children]
 ironic
 
+[ironic-http:children]
+ironic
+
 [ironic-inspector:children]
 ironic
 
@@ -154,6 +157,9 @@ ironic
 ironic
 
 [ironic-pxe:children]
+ironic
+
+[ironic-tftp:children]
 ironic
 
 # magnum
@@ -184,6 +190,9 @@ network
 mistral
 
 [mistral-engine:children]
+mistral
+
+[mistral-event-engine:children]
 mistral
 
 [mistral-executor:children]
@@ -385,6 +394,9 @@ compute
 [prometheus-memcached-exporter:children]
 memcached
 
+[prometheus-msteams:children]
+prometheus-alertmanager
+
 [prometheus-mysqld-exporter:children]
 mariadb
 
@@ -466,4 +478,12 @@ zun
 compute
 
 [zun-cni-daemon:children]
+compute
+
+# hacluster
+
+[hacluster:children]
+control
+
+[hacluster-remote:children]
 compute

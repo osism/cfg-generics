@@ -111,6 +111,9 @@ control
 [octavia:children]
 control
 
+[outward-rabbitmq:children]
+control
+
 [panko:children]
 control
 
@@ -146,6 +149,9 @@ control
 
 [tempest:children]
 manager
+
+[tls-backend:children]
+control
 
 [trove:children]
 control
