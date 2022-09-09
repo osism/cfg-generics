@@ -63,6 +63,6 @@ traefik_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['traefik'] }}:{{
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version)|default('pacific') {{ '}}' }}"
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
-kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version)|default('xena') {{ '}}' }}"
+kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version)|default('yoga') {{ '}}' }}"
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
