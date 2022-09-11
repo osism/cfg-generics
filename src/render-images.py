@@ -34,7 +34,6 @@ environment = jinja2.Environment(loader=loader)
 template = environment.get_template("images.yml")
 result = template.render({
   'images': images,
-  'manager_version': versions['manager_version'],
   'versions': versions['docker_images']
 })
 with open("images.yml", "w+") as fp:

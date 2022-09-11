@@ -60,9 +60,17 @@ traefik_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['traefik'] }}:{{
 
 # image tag depends on CEPH_VERSION or OPENSTACK_VERSION
 
-ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version)|default('pacific') {{ '}}' }}"
+{% if versions['manager'] == 'latest' -%}
+ceph_ansible_tag: "{{ '{{' }} ceph_version|default('pacific') {{ '}}' }}"
+{%- else -%}
+ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version) {{ '}}' }}"
+{% endif %}
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
-kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version)|default('yoga') {{ '}}' }}"
+{% if versions['manager'] == 'latest' -%}
+kolla_ansible_tag: "{{ '{{' }} openstack_version|default('yoga') {{ '}}' }}"
+{%- else -%}
+kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version) {{ '}}' }}"
+{% endif %}
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
