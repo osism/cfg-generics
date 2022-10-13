@@ -9,11 +9,12 @@ import yaml
 MANAGER_VERSION = os.environ.get("MANAGER_VERSION", "latest")
 VERSIONS_URL = os.environ.get(
     "VERSIONS_URL",
-    "https://raw.githubusercontent.com/osism/release/main/%s/base.yml" % MANAGER_VERSION  # noqa E501
+    "https://raw.githubusercontent.com/osism/release/main/%s/base.yml"
+    % MANAGER_VERSION,  # noqa E501
 )
 IMAGES_URL = os.environ.get(
     "IMAGES_URL",
-    "https://raw.githubusercontent.com/osism/release/main/etc/images.yml"  # noqa E501
+    "https://raw.githubusercontent.com/osism/release/main/etc/images.yml",  # noqa E501
 )
 
 # load versions files from release repository
@@ -32,10 +33,12 @@ environment = jinja2.Environment(loader=loader)
 # render images.yml
 
 template = environment.get_template("images.yml")
-result = template.render({
-  'images': images,
-  'manager_version': MANAGER_VERSION,
-  'versions': versions['docker_images']
-})
+result = template.render(
+    {
+        "images": images,
+        "manager_version": MANAGER_VERSION,
+        "versions": versions["docker_images"],
+    }
+)
 with open("images.yml", "w+") as fp:
     fp.write(result)
