@@ -32,6 +32,9 @@ generic
 [kompose:children]
 manager
 
+[osquery:children]
+generic
+
 [podman:children]
 manager
 
