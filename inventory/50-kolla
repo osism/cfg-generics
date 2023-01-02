@@ -29,6 +29,7 @@ storage
 [designate:children]
 control
 
+# TODO: Can be dropped when Yoga is no longer supported
 [elasticsearch:children]
 control
 
@@ -71,6 +72,7 @@ control
 [keystone:children]
 control
 
+# TODO: Can be dropped when Yoga is no longer supported
 [kibana:children]
 control
 
@@ -99,6 +101,12 @@ network
 control
 
 [octavia:children]
+control
+
+[opensearch:children]
+control
+
+[opensearch-dashboard:children]
 control
 
 [outward-rabbitmq:children]
