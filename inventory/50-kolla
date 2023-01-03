@@ -106,7 +106,7 @@ control
 [opensearch:children]
 control
 
-[opensearch-dashboard:children]
+[opensearch-dashboards:children]
 control
 
 [outward-rabbitmq:children]
