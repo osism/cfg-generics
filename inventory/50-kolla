@@ -136,6 +136,9 @@ control
 [skydive:children]
 manager
 
+[skyline:children]
+control
+
 [storage:children]
 control
 

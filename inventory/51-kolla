@@ -427,6 +427,14 @@ compute
 [zun-wsproxy:children]
 zun
 
+# skyline
+
+[skyline-apiserver:children]
+skyline
+
+[skyline-console:children]
+skyline
+
 # common/other
 
 # NOTE: Alphabetical sorting only within this group and not within the whole file.
