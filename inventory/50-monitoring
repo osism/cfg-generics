@@ -6,3 +6,6 @@ generic
 
 [openstack_health_monitor:children]
 monitoring
+
+[scaphandre:children]
+generic
