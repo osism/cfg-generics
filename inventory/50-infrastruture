@@ -41,9 +41,6 @@ manager
 [kubectl:children]
 manager
 
-[minikube:children]
-manager
-
 [mirror:children]
 manager
 
