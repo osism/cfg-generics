@@ -22,9 +22,6 @@ manager
 [helper:children]
 manager
 
-[jenkins:children]
-manager
-
 [k3s_all:children]
 k3s_master
 k3s_node
@@ -62,8 +59,6 @@ manager
 [phpmyadmin:children]
 manager
 
-[rundeck:children]
-manager
 
 [squid:children]
 manager
