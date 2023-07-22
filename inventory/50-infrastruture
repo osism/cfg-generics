@@ -35,9 +35,6 @@ manager
 [keycloak:children]
 manager
 
-[kubectl:children]
-manager
-
 [mirror:children]
 manager
 
