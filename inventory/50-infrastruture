@@ -26,8 +26,7 @@ manager
 k3s_master
 k3s_node
 
-[k3s_node:children]
-manager
+[k3s_node]
 
 [k3s_master:children]
 manager
