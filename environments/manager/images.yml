@@ -27,8 +27,8 @@ postgres_upgrade_tag: "{{ versions['postgres_upgrade'] }}"
 postgres_upgrade_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['postgres_upgrade'] }}:{{ '{{' }} postgres_upgrade_tag {{ '}}' }}"
 {% endif %}
 
-redis_tag: "{{ versions['redis'] }}"
-redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} redis_tag {{ '}}' }}"
+manager_redis_tag: "{{ versions['redis'] }}"
+manager_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} redis_tag {{ '}}' }}"
 
 registry_tag: "{{ versions['registry'] }}"
 registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:{{ '{{' }} registry_tag {{ '}}' }}"
