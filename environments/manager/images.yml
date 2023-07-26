@@ -7,8 +7,8 @@ adminer_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['adminer'] }}:{{
 ara_server_tag: "{{ versions['ara_server'] }}"
 ara_server_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ara_server'] }}:{{ '{{' }} ara_server_tag {{ '}}' }}"
 
-mariadb_tag: "{{ versions['mariadb'] }}"
-mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mariadb'] }}:{{ '{{' }} mariadb_tag {{ '}}' }}"
+ara_server_mariadb_tag: "{{ versions['mariadb'] }}"
+ara_server_mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mariadb'] }}:{{ '{{' }} mariadb_tag {{ '}}' }}"
 
 netbox_tag: "{{ versions['netbox'] }}"
 netbox_image: "{{ '{{' }} docker_registry_netbox|default('quay.io') {{ '}}' }}/{{ images['netbox'] }}:{{ '{{' }} netbox_tag {{ '}}' }}"
