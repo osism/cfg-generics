@@ -1,16 +1,25 @@
 ---
+- job:
+    name: cfg-generics-tox
+    parent: tox
+    vars:
+      tox_envlist: gilt
+
 - project:
     merge-mode: squash-merge
     default-branch: main
     check:
       jobs:
+        - cfg-generics-tox
         - flake8
         - yamllint
     gate:
       jobs:
+        - cfg-generics-tox
         - flake8
         - yamllint
     periodic-daily:
       jobs:
+        - cfg-generics-tox
         - flake8
         - yamllint
