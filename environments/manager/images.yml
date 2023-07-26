@@ -8,7 +8,7 @@ ara_server_tag: "{{ versions['ara_server'] }}"
 ara_server_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ara_server'] }}:{{ '{{' }} ara_server_tag {{ '}}' }}"
 
 ara_server_mariadb_tag: "{{ versions['mariadb'] }}"
-ara_server_mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mariadb'] }}:{{ '{{' }} mariadb_tag {{ '}}' }}"
+ara_server_mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mariadb'] }}:{{ '{{' }} ara_server_mariadb_tag {{ '}}' }}"
 
 netbox_tag: "{{ versions['netbox'] }}"
 netbox_image: "{{ '{{' }} docker_registry_netbox|default('quay.io') {{ '}}' }}/{{ images['netbox'] }}:{{ '{{' }} netbox_tag {{ '}}' }}"
@@ -28,7 +28,7 @@ postgres_upgrade_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['postgr
 {% endif %}
 
 manager_redis_tag: "{{ versions['redis'] }}"
-manager_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} redis_tag {{ '}}' }}"
+manager_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} manager_redis_tag {{ '}}' }}"
 
 registry_tag: "{{ versions['registry'] }}"
 registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:{{ '{{' }} registry_tag {{ '}}' }}"
