@@ -1,9 +1,6 @@
 ##########################################################
 # environment: kolla
 
-[aodh:children]
-control
-
 [barbican:children]
 control
 
