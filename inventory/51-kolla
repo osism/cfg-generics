@@ -218,6 +218,9 @@ network
 [neutron-metering-agent:children]
 neutron
 
+[neutron-ovn-agent:children]
+compute
+
 [neutron-ovn-metadata-agent:children]
 compute
 
