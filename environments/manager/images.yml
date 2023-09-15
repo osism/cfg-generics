@@ -73,7 +73,7 @@ ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version) {{ '}}' }}"
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
 {% if manager_version == 'latest' -%}
-kolla_ansible_tag: "{{ '{{' }} openstack_version|default('zed') {{ '}}' }}"
+kolla_ansible_tag: "{{ '{{' }} openstack_version|default('2023.1') {{ '}}' }}"
 {%- else -%}
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version) {{ '}}' }}"
 {% endif %}
