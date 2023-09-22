@@ -1,0 +1,11 @@
+---
+features:
+  - |
+    The `requirements.yml` has been removed. The version will be set in the `run.sh`
+    script for the seed process in the future exactly as later in the update process
+    via the parameters `ANSIBLE_COLLECTION_SERVICES_VERSION` and
+    `ANSIBLE_PLAYBOOKS_MANAGER_VERSION`.
+upgrade:
+  - |
+    In existing configuration repositories, the `environments/manager/requirements.yml`
+    file can be removed after the generics have been synced.
