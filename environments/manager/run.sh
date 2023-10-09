@@ -50,7 +50,6 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
 fi
 
 if [[ ! -e id_rsa.operator ]]; then
-
     ansible-playbook \
         -i localhost, \
         -e @../secrets.yml \
@@ -59,7 +58,6 @@ if [[ ! -e id_rsa.operator ]]; then
 fi
 
 if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; then
-
     ansible-playbook \
         --private-key id_rsa.operator \
         -i hosts \
@@ -74,9 +72,32 @@ if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; 
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
         osism.manager."$playbook" "$@"
-
+elif [[ $playbook == "operator" ]]; then
+    if [[ $ANSIBLE_ASK_PASS == "True" ]]; then
+        ansible-playbook \
+            -i hosts \
+            -e @../images.yml \
+            -e @../configuration.yml \
+            -e @../secrets.yml \
+            -e @images.yml \
+            -e @configuration.yml \
+            -e @secrets.yml \
+            -u "$ANSIBLE_USER" \
+            osism.manager."$playbook" "$@"
+    else
+        ansible-playbook \
+            --private-key id_rsa.operator \
+            -i hosts \
+            -e @../images.yml \
+            -e @../configuration.yml \
+            -e @../secrets.yml \
+            -e @images.yml \
+            -e @configuration.yml \
+            -e @secrets.yml \
+            -u "$ANSIBLE_USER" \
+            osism.manager."$playbook" "$@"
+    fi
 else
-
     ansible-playbook \
         --private-key id_rsa.operator \
         -i hosts \
@@ -88,12 +109,9 @@ else
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
         osism.manager."$playbook" "$@"
-
 fi
 
 if [[ $CLEANUP == "true" ]]; then
-
     rm id_rsa.operator
     rm -rf "$VENV_PATH"
-
 fi
