@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The `run.sh` script in the manager environment now also installs the
+    osism.commons Ansible collection.
