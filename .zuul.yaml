@@ -11,15 +11,18 @@
     check:
       jobs:
         - cfg-generics-tox
+        - check-shell-syntax
         - flake8
         - yamllint
     gate:
       jobs:
         - cfg-generics-tox
+        - check-shell-syntax
         - flake8
         - yamllint
     periodic-daily:
       jobs:
         - cfg-generics-tox
+        - check-shell-syntax
         - flake8
         - yamllint
