@@ -43,6 +43,14 @@ command -v ansible-galaxy >/dev/null 2>&1 || { echo >&2 "ansible-galaxy not inst
 ANSIBLE_USER=${ANSIBLE_USER:-dragon}
 CLEANUP=${CLEANUP:-false}
 
+cleanup () {
+    if [[ $CLEANUP == "true" ]]; then
+        rm id_rsa.operator
+        rm -rf "$VENV_PATH"
+    fi
+}
+trap cleanup ERR EXIT
+
 if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
     ansible-galaxy collection install -f "git+https://github.com/osism/ansible-collection-commons,${ANSIBLE_COLLECTION_COMMONS_VERSION}"
     ansible-galaxy collection install -f "git+https://github.com/osism/ansible-collection-services,${ANSIBLE_COLLECTION_SERVICES_VERSION}"
@@ -54,7 +62,7 @@ if [[ ! -e id_rsa.operator ]]; then
         -i localhost, \
         -e @../secrets.yml \
         -e "keypair_dest=$(pwd)/id_rsa.operator" \
-        osism.manager.keypair "$@"
+        osism.manager.keypair "$@" || exit $?
 fi
 
 if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; then
@@ -71,7 +79,7 @@ if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; 
         -e @configuration.yml \
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
-        osism.manager."$playbook" "$@"
+        osism.manager."$playbook" "$@" || exit $?
 elif [[ $playbook == "operator" ]]; then
     if [[ $ANSIBLE_ASK_PASS == "True" ]]; then
         ansible-playbook \
@@ -83,7 +91,7 @@ elif [[ $playbook == "operator" ]]; then
             -e @configuration.yml \
             -e @secrets.yml \
             -u "$ANSIBLE_USER" \
-            osism.manager."$playbook" "$@"
+            osism.manager."$playbook" "$@" || exit $?
     else
         ansible-playbook \
             --private-key id_rsa.operator \
@@ -95,7 +103,7 @@ elif [[ $playbook == "operator" ]]; then
             -e @configuration.yml \
             -e @secrets.yml \
             -u "$ANSIBLE_USER" \
-            osism.manager."$playbook" "$@"
+            osism.manager."$playbook" "$@" || exit $?
     fi
 else
     ansible-playbook \
@@ -108,10 +116,5 @@ else
         -e @configuration.yml \
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
-        osism.manager."$playbook" "$@"
-fi
-
-if [[ $CLEANUP == "true" ]]; then
-    rm id_rsa.operator
-    rm -rf "$VENV_PATH"
+        osism.manager."$playbook" "$@" || exit $?
 fi
