@@ -6,6 +6,10 @@ ANSIBLE_COLLECTION_COMMONS_VERSION=${ANSIBLE_COLLECTION_COMMONS_VERSION:-main}
 ANSIBLE_COLLECTION_SERVICES_VERSION=${ANSIBLE_COLLECTION_SERVICES_VERSION:-main}
 ANSIBLE_PLAYBOOKS_MANAGER_VERSION=${ANSIBLE_PLAYBOOKS_MANAGER_VERSION:-main}
 
+ANSIBLE_COLLECTION_COMMONS_SOURCE=${ANSIBLE_COLLECTION_COMMONS_SOURCE:-git+https://github.com/osism/ansible-collection-commons}
+ANSIBLE_COLLECTION_SERVICES_SOURCE=${ANSIBLE_COLLECTION_SERVICES_SOURCE:-git+https://github.com/osism/ansible-collection-services}
+ANSIBLE_PLAYBOOKS_MANAGER_SOURCE=${ANSIBLE_PLAYBOOKS_MANAGER_SOURCE:-git+https://github.com/osism/ansible-playbooks-manager}
+
 INSTALL_ANSIBLE=${INSTALL_ANSIBLE:-true}
 INSTALL_ANSIBLE_ROLES=${INSTALL_ANSIBLE_ROLES:-true}
 VENV_PATH=${VENV_PATH:-.venv}
@@ -52,9 +56,9 @@ cleanup () {
 trap cleanup ERR EXIT
 
 if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
-    ansible-galaxy collection install -f "git+https://github.com/osism/ansible-collection-commons,${ANSIBLE_COLLECTION_COMMONS_VERSION}"
-    ansible-galaxy collection install -f "git+https://github.com/osism/ansible-collection-services,${ANSIBLE_COLLECTION_SERVICES_VERSION}"
-    ansible-galaxy collection install -f "git+https://github.com/osism/ansible-playbooks-manager,${ANSIBLE_PLAYBOOKS_MANAGER_VERSION}"
+    ansible-galaxy collection install -f "${ANSIBLE_COLLECTION_COMMONS_SOURCE},${ANSIBLE_COLLECTION_COMMONS_VERSION}"
+    ansible-galaxy collection install -f "${ANSIBLE_COLLECTION_SERVICES_SOURCE},${ANSIBLE_COLLECTION_SERVICES_VERSION}"
+    ansible-galaxy collection install -f "${ANSIBLE_PLAYBOOKS_MANAGER_SOURCE},${ANSIBLE_PLAYBOOKS_MANAGER_VERSION}"
 fi
 
 if [[ ! -e id_rsa.operator ]]; then

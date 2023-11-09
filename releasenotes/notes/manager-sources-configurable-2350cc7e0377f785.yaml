@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Git sources in the `run.sh` script in `environments/manager` are now
+    configurable via the environment variables `ANSIBLE_COLLECTION_SERVICES_SOURCE`,
+    and `ANSIBLE_COLLECTION_COMMONS_SOURCE`, and `ANSIBLE_PLAYBOOKS_MANAGER_SOURCE`.
