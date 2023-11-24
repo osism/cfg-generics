@@ -18,8 +18,8 @@ for filename in os.listdir("inventory"):
 
     i = 1
     while i < len(sections):
-        if sections[i] < sections[i-1] and sections[i-1] not in IGNORE:
-            result.append([filename, sections[i-1], sections[i]])
+        if sections[i] < sections[i - 1] and sections[i - 1] not in IGNORE:
+            result.append([filename, sections[i - 1], sections[i]])
         i += 1
 
 print(tabulate(result, headers, tablefmt="psql"))
