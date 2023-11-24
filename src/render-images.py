@@ -9,7 +9,7 @@ import yaml
 MANAGER_VERSION = os.environ.get("MANAGER_VERSION", None)
 if not MANAGER_VERSION:
     try:
-        with open("environments/manager/configuration.yml") as fp:
+        with open("configuration.yml") as fp:
             data = yaml.load(fp, Loader=yaml.FullLoader)
 
         MANAGER_VERSION = data["manager_version"]
