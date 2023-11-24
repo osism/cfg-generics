@@ -13,16 +13,19 @@
         - cfg-generics-tox
         - check-shell-syntax
         - flake8
+        - python-black
         - yamllint
     gate:
       jobs:
         - cfg-generics-tox
         - check-shell-syntax
         - flake8
+        - python-black
         - yamllint
     periodic-daily:
       jobs:
         - cfg-generics-tox
         - check-shell-syntax
         - flake8
+        - python-black
         - yamllint

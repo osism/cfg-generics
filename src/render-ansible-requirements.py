@@ -6,15 +6,22 @@ import yaml
 
 # get environment parameters
 
-MANAGER_VERSION = os.environ.get("MANAGER_VERSION", "latest")
+MANAGER_VERSION = os.environ.get("MANAGER_VERSION", None)
+if not MANAGER_VERSION:
+    try:
+        with open("environments/manager/configuration.yml") as fp:
+            data = yaml.read(fp)
+
+        MANAGER_VERSION = data["manager_version"]
+    except:
+        MANAGER_VERSION = "latest"
+
 VERSIONS_URL = os.environ.get(
     "VERSIONS_URL",
-    "https://raw.githubusercontent.com/osism/release/main/%s/base.yml" % MANAGER_VERSION  # noqa E501
+    "https://raw.githubusercontent.com/osism/release/main/%s/base.yml"
+    % MANAGER_VERSION,  # noqa E501
 )
-REQUIREMENTS_FILENAME = os.environ.get(
-    "REQUIREMENTS_FILENAME",
-    "requirements.yml"
-)
+REQUIREMENTS_FILENAME = os.environ.get("REQUIREMENTS_FILENAME", "requirements.yml")
 
 # load versions files from release repository
 
@@ -23,16 +30,16 @@ versions = yaml.full_load(r.text)
 
 # prepare jinja2 environment
 
-loader = jinja2.FileSystemLoader(
-    searchpath=os.path.dirname(REQUIREMENTS_FILENAME)
-)
+loader = jinja2.FileSystemLoader(searchpath=os.path.dirname(REQUIREMENTS_FILENAME))
 environment = jinja2.Environment(loader=loader)
 
 # render requirements.yml
 
 template = environment.get_template(REQUIREMENTS_FILENAME)
-result = template.render({
-  'versions': versions['ansible_roles'],
-})
+result = template.render(
+    {
+        "versions": versions["ansible_roles"],
+    }
+)
 with open(REQUIREMENTS_FILENAME, "w+") as fp:
     fp.write(result)
