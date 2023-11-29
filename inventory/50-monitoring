@@ -9,3 +9,6 @@ monitoring
 
 [scaphandre:children]
 generic
+
+[thanos_sidecar:children]
+prometheus
