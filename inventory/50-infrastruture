@@ -22,6 +22,9 @@ manager
 [helper:children]
 manager
 
+[kubectl:children]
+manager
+
 [k3s_all:children]
 k3s_master
 k3s_node
@@ -57,7 +60,6 @@ manager
 
 [phpmyadmin:children]
 manager
-
 
 [squid:children]
 manager
