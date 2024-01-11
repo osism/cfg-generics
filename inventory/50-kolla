@@ -76,6 +76,9 @@ control
 [kibana:children]
 control
 
+[letsencrypt:children]
+loadbalancer
+
 [loadbalancer:children]
 control
 
