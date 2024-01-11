@@ -438,6 +438,14 @@ skyline
 [skyline-console:children]
 skyline
 
+# letsencrypt
+
+[letsencrypt-webserver:children]
+letsencrypt
+
+[letsencrypt-lego:children]
+letsencrypt
+
 # common/other
 
 # NOTE: Alphabetical sorting only within this group and not within the whole file.
