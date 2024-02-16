@@ -1,9 +1,42 @@
 ---
+- secret:
+    name: SECRET_CFG_GENERICS
+    data:
+      DOCKER_USERNAME: !encrypted/pkcs1-oaep
+        - bkN/dBK3d1gqy0IYxvzxr4chjREHw+Xci2ZstMKVyJzkEEX3tzVHKFWkYUCaWYXoEIxWQ
+          02sZ7tbSgu7iPrT2O10C7Tr8U3IoKI3S6oDCL2lAgh+NQe71cQTMkpjXPTHLMFHqisy8x
+          ISxRlkkS86bYuoYOqdkp3GmSjwYbbmPs1fO3UCqPOiryU2DgHUKjwBj+XnKfQB55EyYnK
+          IhWwu8NpCPbt1zziz3aetYKUuIikO/WpuPv9WCHW0SecdKdSBt1HGazEgg4Z7u8X4yHT1
+          BkOdvTkC+jRINjfF6WcgzODYSdoSeRh11nTmfqWuQzNxWe+56klFbJUBlp6TZm/lM85gO
+          ibU7FSFKqdnkFwAk3lieap5+FqOLQFMLe/da2nWJMZvlEPz2S16dx81T5Ullceh4Ioqy6
+          l+Y0LPEU/UHsSMSl+/XYpbBs5Az4/iQ3ERc/fKblAnav8Oy+yYwSCM82I6xit4S3G+oII
+          df0VhI/Xa7cMCTPweeSQ6DShr4dvvyY59wd8mkoPXaCqXG65yMl1CtvSnuIkmv7Uj+0Ed
+          JeYQjkJEelQbDSR4y97gui9z0W2C3s7gOaTPs46UgLAyengmfsmz23plBH1Z0+ZMnCDto
+          I8W/cMqTmJC8hEPk6jBGLa4tzV9D+hmgr44yUe4qs5PGOYn0Q6FiCobvuegD1Q=
+      DOCKER_PASSWORD: !encrypted/pkcs1-oaep
+        - dAF5Py6UkB9PXKR8OW/qR0VONOOSSrsEkbFFBv8oIjg9QOgXRrE8AX0RLmobqxWwBjjFe
+          BbMj8sDLpaq+KrbH7864ZlBObX/mdyd18TWQ/c2Qd8qcolB6m5tt60m2k0mo14vyK+h1O
+          2RXtZYJwalA4SXlw/IWv4q3v1jqCT8tIRWFJgahNBZZHn7gh4EQX9x0Rj2EMuwmmC3pvD
+          nAt/mozeNtI1gO4nZP97IHKsDPrRrwo6UA1CyfVq9jnmtTad3oOYSd5ywAniBnXG7Lse1
+          59bsNS+4kbjYXTmsWYAlwtMHCyfeyyZxG4HPpMFPhWrSlc9nigJGyM8z6Kud3LwB/rzLP
+          6nheUibmfUeZZYakjp4aVjBD+EoLJI+IWuGodv1yjSuIGpk8vby5V/ZHr/IFtNcUgFcpZ
+          gfkTGtYg0Q8s26xbYI0TvufbmcDq09PLZbzr8FvnoQoNCQEIi9BBhqgz40coZE+cmVu/2
+          bVKvJduJIEdScisXAkN7hFEeurUo6TzktMyvPMpahPE0IgwxOAVetewK4TDxk5CFPRPU5
+          umtPAUyGPNvTVD0h/kB+0q8x8X5UK6o+ZfnpK/r51tcNRNjPQgAmBTcYHdti4/pABqKp6
+          TUcUGNvKDU1sS0cLP9F/iMH+VxNeAb+YHpL25gvfnxMjmESpy6199LYTeXE5lk=
+
 - job:
     name: cfg-generics-tox
     parent: tox
     vars:
       tox_envlist: gilt
+
+- job:
+    name: cfg-generics-container-image-osism-ansible-push
+    parent: container-image-osism-ansible-push
+    secrets:
+      - name: secret
+        secret: SECRET_CFG_GENERICS
 
 - project:
     merge-mode: squash-merge
@@ -31,5 +64,5 @@
         - yamllint
     post:
       jobs:
-        - container-image-osism-ansible-push:
+        - cfg-generics-container-image-osism-ansible-push:
             branches: main
