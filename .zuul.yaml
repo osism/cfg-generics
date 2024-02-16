@@ -33,7 +33,7 @@
 
 - job:
     name: cfg-generics-container-image-osism-ansible-push
-    parent: container-image-osism-ansible-push
+    parent: abstract-container-image-osism-ansible-push
     secrets:
       - name: secret
         secret: SECRET_CFG_GENERICS
