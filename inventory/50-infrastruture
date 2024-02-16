@@ -32,7 +32,7 @@ k3s_node
 [k3s_node]
 
 [k3s_master:children]
-manager
+control
 
 [keycloak:children]
 manager
