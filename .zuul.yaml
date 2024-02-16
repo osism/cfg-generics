@@ -37,6 +37,7 @@
     secrets:
       - name: secret
         secret: SECRET_CFG_GENERICS
+        pass-to-parent: true
 
 - project:
     merge-mode: squash-merge
