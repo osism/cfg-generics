@@ -32,6 +32,14 @@
       tox_envlist: gilt
 
 - job:
+    name: cfg-generics-container-image-inventory-reconciler-push
+    parent: abstract-container-image-inventory-reconciler-push
+    secrets:
+      - name: secret
+        secret: SECRET_CFG_GENERICS
+        pass-to-parent: true
+
+- job:
     name: cfg-generics-container-image-osism-ansible-push
     parent: abstract-container-image-osism-ansible-push
     secrets:
@@ -65,5 +73,7 @@
         - yamllint
     post:
       jobs:
+        - cfg-generics-container-image-inventory-reconciler-push:
+            branches: main
         - cfg-generics-container-image-osism-ansible-push:
             branches: main
