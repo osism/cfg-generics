@@ -3,27 +3,27 @@
     name: SECRET_CFG_GENERICS
     data:
       DOCKER_USERNAME: !encrypted/pkcs1-oaep
-        - bkN/dBK3d1gqy0IYxvzxr4chjREHw+Xci2ZstMKVyJzkEEX3tzVHKFWkYUCaWYXoEIxWQ
-          02sZ7tbSgu7iPrT2O10C7Tr8U3IoKI3S6oDCL2lAgh+NQe71cQTMkpjXPTHLMFHqisy8x
-          ISxRlkkS86bYuoYOqdkp3GmSjwYbbmPs1fO3UCqPOiryU2DgHUKjwBj+XnKfQB55EyYnK
-          IhWwu8NpCPbt1zziz3aetYKUuIikO/WpuPv9WCHW0SecdKdSBt1HGazEgg4Z7u8X4yHT1
-          BkOdvTkC+jRINjfF6WcgzODYSdoSeRh11nTmfqWuQzNxWe+56klFbJUBlp6TZm/lM85gO
-          ibU7FSFKqdnkFwAk3lieap5+FqOLQFMLe/da2nWJMZvlEPz2S16dx81T5Ullceh4Ioqy6
-          l+Y0LPEU/UHsSMSl+/XYpbBs5Az4/iQ3ERc/fKblAnav8Oy+yYwSCM82I6xit4S3G+oII
-          df0VhI/Xa7cMCTPweeSQ6DShr4dvvyY59wd8mkoPXaCqXG65yMl1CtvSnuIkmv7Uj+0Ed
-          JeYQjkJEelQbDSR4y97gui9z0W2C3s7gOaTPs46UgLAyengmfsmz23plBH1Z0+ZMnCDto
-          I8W/cMqTmJC8hEPk6jBGLa4tzV9D+hmgr44yUe4qs5PGOYn0Q6FiCobvuegD1Q=
+        - W9F3X9Ai9XKWOvPDmTlUy3gmgl866q76nYlKqlvxsUZJNHcPVlfA9P7yGEBEalc7a21NH
+          4K/G3j9QgPpWNu3wD8xfLhNZgjWxtB5Om4Pp6OjYbMnczp4R9LxWvnJxhmmYka0dKqJnn
+          Yyg3MP7x9p6eAYzEGCfTZAWkWaSQz8S2Z/INzDlBsA32di2UyQU4o7sbj8TAnWx8wUTIk
+          e/sM1Sa3DJj2USxmhizD7IYzeFBf2i12UlWrAC/aMpE8Tyil19qUCmRoHgmUrIDr1ARUF
+          msFblyv3jWtWFBCml0XO72I1YMp1mVSI6C77syQOY89zAmo6Mwm/u+x0LLvGaKI7sDbv6
+          ZP8FXr1c2Tl1qQENEKqN3QSf0mcBC9gZ5IIssThGH29HO//VHHhRMoLyzUnHeyX2zILyc
+          B91v6bg2xHm/v/9T/Y9HTQ+vvBYWXMSex0wJxA0LFgm2pywNIzbO3PTMJDbGbjts9p9wM
+          eyF59uNXDe33tMcC4fodxvROOMYQyAeV4uNkwW0tM8BhSWIjpZwW+3I77kT6ydI8VcIoA
+          BIt8oe6GOM5kfhjfRXTEvSp8DZT8tdAv1o92Tw7u2j92FGBRnIeCaxbeTLhx2oRvsWOF1
+          kriEeHk24tDb/nlGT1D/Iw8tUBiZUDl1hXLZ+6prNFJeKa9hEsQ2caJOvOvgOY=
       DOCKER_PASSWORD: !encrypted/pkcs1-oaep
-        - dAF5Py6UkB9PXKR8OW/qR0VONOOSSrsEkbFFBv8oIjg9QOgXRrE8AX0RLmobqxWwBjjFe
-          BbMj8sDLpaq+KrbH7864ZlBObX/mdyd18TWQ/c2Qd8qcolB6m5tt60m2k0mo14vyK+h1O
-          2RXtZYJwalA4SXlw/IWv4q3v1jqCT8tIRWFJgahNBZZHn7gh4EQX9x0Rj2EMuwmmC3pvD
-          nAt/mozeNtI1gO4nZP97IHKsDPrRrwo6UA1CyfVq9jnmtTad3oOYSd5ywAniBnXG7Lse1
-          59bsNS+4kbjYXTmsWYAlwtMHCyfeyyZxG4HPpMFPhWrSlc9nigJGyM8z6Kud3LwB/rzLP
-          6nheUibmfUeZZYakjp4aVjBD+EoLJI+IWuGodv1yjSuIGpk8vby5V/ZHr/IFtNcUgFcpZ
-          gfkTGtYg0Q8s26xbYI0TvufbmcDq09PLZbzr8FvnoQoNCQEIi9BBhqgz40coZE+cmVu/2
-          bVKvJduJIEdScisXAkN7hFEeurUo6TzktMyvPMpahPE0IgwxOAVetewK4TDxk5CFPRPU5
-          umtPAUyGPNvTVD0h/kB+0q8x8X5UK6o+ZfnpK/r51tcNRNjPQgAmBTcYHdti4/pABqKp6
-          TUcUGNvKDU1sS0cLP9F/iMH+VxNeAb+YHpL25gvfnxMjmESpy6199LYTeXE5lk=
+        - SEu4lL+uBvWQS0z/P+cp8pWJ/qdNqUBq+1t7f0HYdsgGgPHfINVhk1RaC73HDp2ejiBtH
+          qUAZglnIo7eqolAKOCVgDyCmhoBEYa5JOBeJoJ5ReNvoqlGEHS+VTrnZ9TUQOTm0tyr/h
+          u3Q+E5zx9W5a9l+ks3cB8HVBn2CT5m/X4t994rivosaEbJLbYIm4cZ8PirB9m1IpGwW+O
+          2afrJH+WYn7bXcsJ1Y69Y52fjyZxhhXmbDaIwpdZzLJJOV3JqM1L00W7qtc/5xGp9HV6b
+          uOQsSdOm2Ms3Fm8m/bwKr1koLZflNog7md/25+haABv+5z9sIibkU/lx8/mtV9EoBIi8n
+          +g+P53TLhn0Bc+NEgnC9T8m5OOOCb1QySbnAN+s+JLe7p+NJX33tncd6NqIxJjQhZo6f6
+          kFbQ/lZa1ze6VpQ2QjDFH5N/+ufeYlRfd+0dN+MfeZWQLsSAi9YXxEQGMWEcY9yQeELJo
+          hWfWOvihtKaC0x2ZfGYYnkuO0NyATeBgJV+87jPzVntWycWVCRsMSkg4CZPvGeF4k1yo0
+          SVtfH7ZuICFOjYzTyCKpkYbJYowpvgvB//3MKjT0ZHvGmhebi8cSHAM4P+lB2f9AgP1wY
+          4rwU6IhEN6p4LIKgK19V7VedA/xE/OoU/RmC56K8H5izHEfACvxouhw03SMdl4=
 
 - job:
     name: cfg-generics-tox
