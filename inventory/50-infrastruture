@@ -49,9 +49,6 @@ manager
 [nexus:children]
 manager
 
-[openldap:children]
-manager
-
 [openstackclient:children]
 manager
 
