@@ -29,6 +29,7 @@
     name: cfg-generics-tox
     parent: tox
     vars:
+      BRANCH: "{{ zuul.branch }}"
       tox_envlist: gilt
 
 - job:
