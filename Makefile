@@ -3,7 +3,7 @@ export PATH := ${PATH}:${PWD}/venv/bin
 
 BRANCH ?= main
 
-deps: venv/bin/activate ## Install software preconditions to `.venv`.
+deps: venv/bin/activate ## Install software preconditions to `venv`.
 
 prune:
 	rm -rf venv
