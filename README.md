@@ -21,8 +21,8 @@ The following commands are executed within the root directory of the
 configuration repository.
 
 ```
-virtualenv -p python3 .venv
-source .venv/bin/activate
+virtualenv -p python3 venv
+source venv/bin/activate
 pip3 install -r requirements.txt
 MANAGER_VERSION=1.0.0 gilt overlay
 ```

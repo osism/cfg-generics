@@ -1,6 +1,11 @@
 venv = . venv/bin/activate
 export PATH := ${PATH}:${PWD}/venv/bin
 
+<<<<<<< HEAD
+=======
+BRANCH ?= main
+
+>>>>>>> f055861 (Renamed the folder also in the documentation and the script)
 deps: venv/bin/activate ## Install software preconditions to `venv`.
 
 prune:
