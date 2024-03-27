@@ -10,7 +10,7 @@ prune:
 
 venv/bin/activate: Makefile requirements.txt
 	@which python3 > /dev/null || { echo "Missing requirement: python3" >&2; exit 1; }
-	[ -e venv/bin/python ] || python3 -m venv venv --prompt  osism-$(shell basename ${PWD})
+	[ -e venv/bin/python ] || python3 -m venv venv --prompt osism-$(shell basename ${PWD})
 	@${venv} && pip3 install -r requirements.txt
 	touch venv/bin/activate
 
