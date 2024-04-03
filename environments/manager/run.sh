@@ -16,10 +16,10 @@ VENV_PATH=${VENV_PATH:-.venv}
 VENV_PYTHON_BIN=${VENV_PYTHON_BIN:-python3}
 
 RUNDIR="$(dirname $(readlink -f $0))"
-cd $RUNDIR || exit 1
+cd "$RUNDIR" || exit 1
 
 
-if [[ $# -lt 1 ]]; then
+if [[ "$#" -lt 1 ]]; then
     echo "usage: $0 PLAYBOOK [ANSIBLEARGS...]"
     exit 1
 fi
@@ -52,9 +52,8 @@ configured_branch="$(grep -E "^configuration_git_version:"  $RUNDIR/configuratio
 current_branch="$(git rev-parse --abbrev-ref HEAD)"
 
 if [ "$configured_branch" != "$current_branch" ];then
-   echo "ERROR:"
-   echo "Configured branch '$configured_branch' (see configuration.yml, configuration_git_version)"
-   echo "and current branch '$current_branch' are not the same! Exiting!"
+   echo "ERROR: Configured branch '$configured_branch' and current checkout-branch '$current_branch' are not the same!"
+   echo "(see ${RUNDIR}/configuration.yml, configuration_git_version)"
    exit 1
 fi
 
