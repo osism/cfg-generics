@@ -85,6 +85,10 @@ if [[ ! -e id_rsa.operator ]]; then
         osism.manager.keypair "$@" || exit $?
 fi
 
+if [[ $playbook != "operator" && $ANSIBLE_USER != "dragon" ]]; then
+   echo -e "\nWARNING: ANSIBLE_USER is currently set to '$ANSIBLE_USER'. Normally ANSIBLE_USER should be set to 'dragon' for the play '$playbook'.\n"
+fi
+
 if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; then
     ansible-playbook \
         --private-key id_rsa.operator \
