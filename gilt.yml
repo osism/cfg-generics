@@ -2,8 +2,6 @@
 - git: https://github.com/osism/cfg-generics.git
   version: main
   files:
-    - src: src/render-images.py
-      dst: ./environments/manager/render-images.py
     - src: gilt.yml
       dst: ./gilt.yml
     - src: requirements.txt
@@ -17,6 +15,8 @@
     - src: environments/manager/ansible.cfg
       dst: environments/manager/ansible.cfg
     - src: environments/manager/requirements.*
+      dst: environments/manager/
+    - src: src/render-images.py
       dst: environments/manager/
       post_commands:
         - python3 render-images.py
