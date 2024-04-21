@@ -26,11 +26,18 @@
           4rwU6IhEN6p4LIKgK19V7VedA/xE/OoU/RmC56K8H5izHEfACvxouhw03SMdl4=
 
 - job:
-    name: cfg-generics-tox
+    name: cfg-generics-tox-gilt
     parent: tox
     vars:
       BRANCH: "{{ zuul.branch }}"
       tox_envlist: gilt
+
+- job:
+    name: cfg-generics-tox-check
+    parent: tox
+    vars:
+      BRANCH: "{{ zuul.branch }}"
+      tox_envlist: check
 
 - job:
     name: cfg-generics-container-image-inventory-reconciler-push
@@ -53,21 +60,24 @@
     default-branch: main
     check:
       jobs:
-        - cfg-generics-tox
+        - cfg-generics-tox-check
+        - cfg-generics-tox-gilt
         - check-shell-syntax
         - flake8
         - python-black
         - yamllint
     gate:
       jobs:
-        - cfg-generics-tox
+        - cfg-generics-tox-check
+        - cfg-generics-tox-gilt
         - check-shell-syntax
         - flake8
         - python-black
         - yamllint
     periodic-daily:
       jobs:
-        - cfg-generics-tox
+        - cfg-generics-tox-check
+        - cfg-generics-tox-gilt
         - check-shell-syntax
         - flake8
         - python-black

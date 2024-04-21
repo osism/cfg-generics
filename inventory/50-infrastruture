@@ -22,19 +22,19 @@ manager
 [helper:children]
 manager
 
-[kubectl:children]
-manager
-
 [k3s_all:children]
 k3s_master
 k3s_node
 
-[k3s_node]
-
 [k3s_master:children]
 control
 
+[k3s_node]
+
 [keycloak:children]
+manager
+
+[kubectl:children]
 manager
 
 [metering:children]

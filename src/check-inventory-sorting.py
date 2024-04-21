@@ -2,15 +2,22 @@
 
 from configparser import ConfigParser
 import os
+import sys
 
 from tabulate import tabulate
 
-IGNORE = ["cephclient:children"]
+IGNORE = [
+    "cephclient:children",
+    "zun-wsproxy:children",
+]
 
 headers = ["filename", "", ""]
 result = []
 
 for filename in os.listdir("inventory"):
+    if filename.startswith("."):
+        continue
+
     config = ConfigParser(allow_no_value=True)
     config.read(os.path.join("inventory", filename))
 
@@ -18,8 +25,14 @@ for filename in os.listdir("inventory"):
 
     i = 1
     while i < len(sections):
-        if sections[i] < sections[i - 1] and sections[i - 1] not in IGNORE:
+        if (
+            sections[i] < sections[i - 1]
+            and sections[i - 1] not in IGNORE
+            and sections[i] not in IGNORE
+        ):
             result.append([filename, sections[i - 1], sections[i]])
         i += 1
 
-print(tabulate(result, headers, tablefmt="psql"))
+if result:
+    print(tabulate(result, headers, tablefmt="psql"))
+    sys.exit(1)
