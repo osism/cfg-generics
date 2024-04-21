@@ -106,10 +106,10 @@ control
 [octavia:children]
 control
 
-[opensearch:children]
+[opensearch-dashboards:children]
 control
 
-[opensearch-dashboards:children]
+[opensearch:children]
 control
 
 [outward-rabbitmq:children]

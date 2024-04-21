@@ -159,6 +159,14 @@ ironic
 [ironic-tftp:children]
 ironic
 
+# letsencrypt
+
+[letsencrypt-lego:children]
+letsencrypt
+
+[letsencrypt-webserver:children]
+letsencrypt
+
 # magnum
 
 [magnum-api:children]
@@ -383,6 +391,14 @@ network
 [skydive-analyzer:children]
 skydive
 
+# skyline
+
+[skyline-apiserver:children]
+skyline
+
+[skyline-console:children]
+skyline
+
 # storm
 
 [storm-nimbus:children]
@@ -429,22 +445,6 @@ compute
 
 [zun-wsproxy:children]
 zun
-
-# skyline
-
-[skyline-apiserver:children]
-skyline
-
-[skyline-console:children]
-skyline
-
-# letsencrypt
-
-[letsencrypt-webserver:children]
-letsencrypt
-
-[letsencrypt-lego:children]
-letsencrypt
 
 # common/other
 
