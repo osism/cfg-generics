@@ -25,7 +25,33 @@ VERSIONS_URL = os.environ.get(
 r = requests.get(VERSIONS_URL)
 versions = yaml.full_load(r.text)
 
+commons_version = versions["ansible_collections"]["osism.commons"]
 docker_version = versions["osism_projects"]["docker"]
+playbooks_manager = versions.get("manager_playbooks_version", "main")
+services_version = versions["ansible_collections"]["osism.services"]
+
+try:
+    with open("manager/run.sh", "r+") as fp:
+        data = fp.read()
+        data = re.sub(
+            "^ANSIBLE_COLLECTION_COMMONS_VERSION=.*$",
+            f"ANSIBLE_COLLECTION_COMMONS_VERSION=${{ANSIBLE_COLLECTION_COMMONS_VERSION:-{commons_version}}}",
+            data,
+        )
+        data = re.sub(
+            "^ANSIBLE_COLLECTION_SERVICES_VERSION=.*$",
+            f"ANSIBLE_COLLECTION_SERVICES_VERSION=${{ANSIBLE_COLLECTION_SERVICES_VERSION:-{services_version}}}",
+            data,
+        )
+        data = re.sub(
+            "^ANSIBLE_PLAYBOOKS_MANAGER_VERSION=.*$",
+            f"ANSIBLE_PLAYBOOKS_MANAGER_VERSION=${{ANSIBLE_PLAYBOOKS_MANAGER_VERSION:-{playbooks_manager}}}",
+            data,
+        )
+        fp.seek(0)
+        fp.write(data)
+except FileNotFoundError:
+    pass
 
 print(
     "The docker_version parameter in environments/configuration.yml and"
