@@ -49,7 +49,7 @@ try:
             data,
         )
         fp.seek(0)
-        fp.write(data.rstrip())
+        fp.write(data)
 except FileNotFoundError:
     pass
 
@@ -66,7 +66,7 @@ try:
         data = fp.read()
         data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
-        fp.write(data.rstrip())
+        fp.write(data)
 except FileNotFoundError:
     pass
 
@@ -75,6 +75,6 @@ try:
         data = fp.read()
         data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
-        fp.write(data.rstrip())
+        fp.write(data)
 except FileNotFoundError:
     pass
