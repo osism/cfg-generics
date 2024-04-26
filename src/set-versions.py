@@ -8,7 +8,7 @@ import yaml
 MANAGER_VERSION = os.environ.get("MANAGER_VERSION", None)
 if not MANAGER_VERSION:
     try:
-        with open("configuration.yml") as fp:
+        with open("manager/configuration.yml") as fp:
             data = yaml.load(fp, Loader=yaml.FullLoader)
 
         MANAGER_VERSION = data["manager_version"]
@@ -34,22 +34,22 @@ try:
     with open("manager/run.sh", "r+") as fp:
         data = fp.read()
         data = re.sub(
-            "^ANSIBLE_COLLECTION_COMMONS_VERSION=.*$",
-            f"ANSIBLE_COLLECTION_COMMONS_VERSION=${{ANSIBLE_COLLECTION_COMMONS_VERSION:-{commons_version}}}",
+            "ANSIBLE_COLLECTION_COMMONS_VERSION=.*",
+            f"ANSIBLE_COLLECTION_COMMONS_VERSION=${{ANSIBLE_COLLECTION_COMMONS_VERSION:-v{commons_version}}}",
             data,
         )
         data = re.sub(
-            "^ANSIBLE_COLLECTION_SERVICES_VERSION=.*$",
-            f"ANSIBLE_COLLECTION_SERVICES_VERSION=${{ANSIBLE_COLLECTION_SERVICES_VERSION:-{services_version}}}",
+            "ANSIBLE_COLLECTION_SERVICES_VERSION=.*",
+            f"ANSIBLE_COLLECTION_SERVICES_VERSION=${{ANSIBLE_COLLECTION_SERVICES_VERSION:-v{services_version}}}",
             data,
         )
         data = re.sub(
-            "^ANSIBLE_PLAYBOOKS_MANAGER_VERSION=.*$",
+            "ANSIBLE_PLAYBOOKS_MANAGER_VERSION=.*",
             f"ANSIBLE_PLAYBOOKS_MANAGER_VERSION=${{ANSIBLE_PLAYBOOKS_MANAGER_VERSION:-{playbooks_manager}}}",
             data,
         )
         fp.seek(0)
-        fp.write(data)
+        fp.write(data.rstrip())
 except FileNotFoundError:
     pass
 
@@ -64,21 +64,17 @@ print(
 try:
     with open("configuration.yml", "r+") as fp:
         data = fp.read()
-        data = re.sub(
-            "^docker_version: .*$", f"docker_version: '{docker_version}'", data
-        )
+        data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
-        fp.write(data)
+        fp.write(data.rstrip())
 except FileNotFoundError:
     pass
 
 try:
     with open("manager/configuration.yml", "r+") as fp:
         data = fp.read()
-        data = re.sub(
-            "^docker_version: .*$", f"docker_version: '{docker_version}'", data
-        )
+        data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
-        fp.write(data)
+        fp.write(data.rstrip())
 except FileNotFoundError:
     pass
