@@ -77,6 +77,14 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
     ansible-galaxy collection install -f "${ANSIBLE_PLAYBOOKS_MANAGER_SOURCE},${ANSIBLE_PLAYBOOKS_MANAGER_VERSION}"
 fi
 
+if [[ \
+      $(head -1 secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 || \
+      $(head -1 ../secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 || \
+      $(head -1 ../infrastructure/secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 \
+   ]]; then
+    export ANSIBLE_ASK_VAULT_PASS=true
+fi
+
 if [[ ! -e id_rsa.operator ]]; then
     ansible-playbook \
         -i localhost, \
