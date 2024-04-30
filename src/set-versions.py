@@ -100,3 +100,24 @@ try:
         fp.write(data)
 except FileNotFoundError:
     pass
+
+# check for openstack_version & ceph_version
+
+if MANAGER_VERSION != "latest":
+    try:
+        with open("manager/configuration.yml", "r") as fp:
+            data = fp.read()
+            if "openstack_version" in data:
+                print(
+                    "openstack_version is available in x. If the manager_version is"
+                    " not set to latest, this parameter should not be present there."
+                    " Please check and remove the parameter."
+                )
+            if "ceph_version" in data:
+                print(
+                    "ceph_version is available in x. If the manager_version is"
+                    " not set to latest, this parameter should not be present there."
+                    " Please check and remove the parameter."
+                )
+    except FileNotFoundError:
+        pass
