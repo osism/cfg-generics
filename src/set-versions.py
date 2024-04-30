@@ -1,6 +1,7 @@
 import os
 import re
 
+from packaging.version import Version
 import requests
 import yaml
 
@@ -33,18 +34,19 @@ services_version = versions["ansible_collections"]["osism.services"]
 
 # manage generics version in gilt.yml
 
-try:
-    with open("../gilt.yml", "r+") as fp:
-        data = fp.read()
-        data = re.sub(
-            "version: .*",
-            f"version: {generics_version}",
-            data,
-        )
-        fp.seek(0)
-        fp.write(data)
-except FileNotFoundError:
-    pass
+if MANAGER_VERSION == "latest" or Version(MANAGER_VERSION) >= Version("7.0.3"):
+    try:
+        with open("../gilt.yml", "r+") as fp:
+            data = fp.read()
+            data = re.sub(
+                "version: .*",
+                f"version: {generics_version}",
+                data,
+            )
+            fp.seek(0)
+            fp.write(data)
+    except FileNotFoundError:
+        pass
 
 # manage ansible collection versions in manager/run.sh
 
