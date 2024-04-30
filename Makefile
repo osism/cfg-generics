@@ -13,7 +13,7 @@ prune:
 	touch .venv/bin/activate
 
 sync: deps
-	@[ "${BRANCH}" ] && sed -i -e "s/version: .*/version: ${BRANCH}/" gilt.yml
+	@[ "${BRANCH}" ] && sed -i -e "s/version: .*/version: ${BRANCH}/" gilt.yml || exit 0
 	@${venv} && gilt overlay && gilt overlay
 
 ansible_vault_rekey: deps
