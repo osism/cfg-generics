@@ -75,14 +75,6 @@ except FileNotFoundError:
 
 # manage docker version in environments/configuration.yml and environments/manager/configuration.yml
 
-print(
-    "The docker_version parameter in environments/configuration.yml and"
-    " environments/manager/configuration.yml is modified"
-    " if available there. If the docker_version is configured elsewhere, it must"
-    " be adjusted manually.\n\n"
-    f"The Docker version for OSISM {MANAGER_VERSION} is '{docker_version}'."
-)
-
 try:
     with open("configuration.yml", "r+") as fp:
         data = fp.read()
@@ -102,14 +94,6 @@ except FileNotFoundError:
     pass
 
 # manage docker cli version in environments/configuration.yml and environments/manager/configuration.yml
-
-print(
-    "The docker_cli_version parameter in environments/configuration.yml and"
-    " environments/manager/configuration.yml is modified"
-    " if available there. If the docker_cli_version is configured elsewhere, it must"
-    " be adjusted manually.\n\n"
-    f"The Docker version for OSISM {MANAGER_VERSION} is '{docker_version}'."
-)
 
 try:
     with open("configuration.yml", "r+") as fp:
