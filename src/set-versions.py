@@ -45,6 +45,7 @@ if MANAGER_VERSION == "latest" or Version(MANAGER_VERSION) >= Version("7.0.3"):
             )
             fp.seek(0)
             fp.write(data)
+            fp.truncate()
     except FileNotFoundError:
         pass
 
@@ -70,6 +71,7 @@ try:
         )
         fp.seek(0)
         fp.write(data)
+        fp.truncate()
 except FileNotFoundError:
     pass
 
@@ -81,6 +83,7 @@ try:
         data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
         fp.write(data)
+        fp.truncate()
 except FileNotFoundError:
     pass
 
@@ -90,6 +93,7 @@ try:
         data = re.sub("docker_version: .*", f"docker_version: '{docker_version}'", data)
         fp.seek(0)
         fp.write(data)
+        fp.truncate()
 except FileNotFoundError:
     pass
 
@@ -103,6 +107,7 @@ try:
         )
         fp.seek(0)
         fp.write(data)
+        fp.truncate()
 except FileNotFoundError:
     pass
 
@@ -114,6 +119,7 @@ try:
         )
         fp.seek(0)
         fp.write(data)
+        fp.truncate()
 except FileNotFoundError:
     pass
 
