@@ -25,6 +25,13 @@ barbican
 [barbican-worker:children]
 barbican
 
+# blazar
+[blazar-api:children]
+blazar
+
+[blazar-manager:children]
+blazar
+
 # ceilometer
 
 [ceilometer-api:children]

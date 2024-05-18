@@ -10,6 +10,9 @@ control
 [bifrost:children]
 manager
 
+[blazar:children]
+control
+
 [ceilometer:children]
 control
 
