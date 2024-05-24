@@ -1,5 +1,0 @@
----
-features:
-  - |
-    Try to read `MANAGER_VERSION` from `environments/manager/configuration.yml`  if
-    `MANAGER_VERSION` has not been set.

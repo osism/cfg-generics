@@ -1,7 +1,0 @@
----
-features:
-  - |
-    In the `run.sh` script in `environments/manager`, the execution is now interrupted
-    directly in the event of an error in an Ansible run and the exit code is passed through.
-    A trap is used to keep things clean as before (only if a cleanup was requested with
-    `CLEANUP=True`).
