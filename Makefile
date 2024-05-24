@@ -14,7 +14,7 @@ venv/bin/activate: Makefile requirements.txt
 	@${venv} && pip3 install -r requirements.txt
 	touch venv/bin/activate
 
-.PHONY: deps
+.PHONY: sync
 sync: deps
 	@[ "${BRANCH}" ] && sed -i -e "s/version: .*/version: ${BRANCH}/" gilt.yml || exit 0
 	@${venv} && gilt overlay && gilt overlay
