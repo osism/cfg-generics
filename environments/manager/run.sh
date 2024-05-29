@@ -78,9 +78,9 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
 fi
 
 if [[ \
-      $(head -1 secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 || \
-      $(head -1 ../secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 || \
-      $(head -1 ../infrastructure/secrets.yml | grep -v -q \$ANSIBLE_VAULT) == 1 \
+      $(head -1 secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
+      $(head -1 ../secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
+      $(head -1 ../infrastructure/secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 \
    ]]; then
     export ANSIBLE_ASK_VAULT_PASS=true
 fi
