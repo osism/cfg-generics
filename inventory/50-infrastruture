@@ -43,6 +43,9 @@ manager
 [mirror:children]
 manager
 
+[netbird:children]
+manager
+
 [netbox:children]
 manager
 
