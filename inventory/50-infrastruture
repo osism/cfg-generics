@@ -31,6 +31,9 @@ control
 
 [k3s_node]
 
+[k9s:children]
+manager
+
 [keycloak:children]
 manager
 
