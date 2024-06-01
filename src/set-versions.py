@@ -32,6 +32,12 @@ generics_version = versions["generics_version"]
 playbooks_manager = versions.get("manager_playbooks_version", "main")
 services_version = versions["ansible_collections"]["osism.services"]
 
+if commons_version != "main":
+    commons_version = f"v{commons_version}"
+
+if services_version != "main":
+    services_version = f"v{services_version}"
+
 # manage generics version in gilt.yml
 
 if MANAGER_VERSION == "latest" or Version(MANAGER_VERSION) >= Version("7.0.3"):
@@ -56,12 +62,12 @@ try:
         data = fp.read()
         data = re.sub(
             "ANSIBLE_COLLECTION_COMMONS_VERSION=.*",
-            f"ANSIBLE_COLLECTION_COMMONS_VERSION=${{ANSIBLE_COLLECTION_COMMONS_VERSION:-v{commons_version}}}",
+            f"ANSIBLE_COLLECTION_COMMONS_VERSION=${{ANSIBLE_COLLECTION_COMMONS_VERSION:-{commons_version}}}",
             data,
         )
         data = re.sub(
             "ANSIBLE_COLLECTION_SERVICES_VERSION=.*",
-            f"ANSIBLE_COLLECTION_SERVICES_VERSION=${{ANSIBLE_COLLECTION_SERVICES_VERSION:-v{services_version}}}",
+            f"ANSIBLE_COLLECTION_SERVICES_VERSION=${{ANSIBLE_COLLECTION_SERVICES_VERSION:-{services_version}}}",
             data,
         )
         data = re.sub(
