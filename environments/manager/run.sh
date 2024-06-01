@@ -30,7 +30,7 @@ playbook=$1
 shift
 
 if [[ $INSTALL_ANSIBLE == "true" ]]; then
-    if [[ ! -e $VENV_PATH ]]; then
+    if [[ ! -e $VENV_PATH/bin/activate ]]; then
 
         command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
 
