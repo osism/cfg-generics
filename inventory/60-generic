@@ -29,9 +29,6 @@ manager
 [journald:children]
 generic
 
-[kompose:children]
-manager
-
 [osquery:children]
 generic
 
