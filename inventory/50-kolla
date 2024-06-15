@@ -94,6 +94,9 @@ control
 [mariadb:children]
 control
 
+[masakari:children]
+control
+
 [memcached:children]
 control
 

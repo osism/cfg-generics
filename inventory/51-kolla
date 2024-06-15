@@ -196,6 +196,20 @@ manila
 [manila-share:children]
 network
 
+# masakari
+
+[masakari-api:children]
+masakari
+
+[masakari-engine:children]
+masakari
+
+[masakari-hostmonitor:children]
+masakari
+
+[masakari-instancemonitor:children]
+compute
+
 # mistral
 
 [mistral-api:children]
