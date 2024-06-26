@@ -58,9 +58,6 @@ manager
 [openstackclient:children]
 manager
 
-[patchman:children]
-manager
-
 [phpmyadmin:children]
 manager
 
