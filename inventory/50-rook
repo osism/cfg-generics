@@ -1,0 +1,17 @@
+##########################################################
+# environment: rook
+
+[rook-mds:children]
+ceph-control
+
+[rook-mgr:children]
+ceph-control
+
+[rook-mon:children]
+ceph-control
+
+[rook-osd:children]
+ceph-resource
+
+[rook-rgw:children]
+ceph-control
