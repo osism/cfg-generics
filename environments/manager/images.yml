@@ -34,10 +34,10 @@ registry_tag: "{{ versions['registry'] }}"
 registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:{{ '{{' }} registry_tag {{ '}}' }}"
 
 osism_ansible_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
-osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images[ 'osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
+osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
 
 osism_kubernetes_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
-osism_kubernetes_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images[ 'osism_kubernetes'] }}:{{ '{{' }} osism_kubernetes_tag {{ '}}' }}"
+osism_kubernetes_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_kubernetes'] }}:{{ '{{' }} osism_kubernetes_tag {{ '}}' }}"
 
 {% if versions['inventory_reconciler'] == 'latest' -%}
 inventory_reconciler_tag: "{{ '{{' }} inventory_reconciler_version|default('latest') {{ '}}' }}"
