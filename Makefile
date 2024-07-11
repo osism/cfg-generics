@@ -83,7 +83,7 @@ ansible_vault_rekey: deps check_vault_pass
 .PHONY: ansible_vault_show
 ansible_vault_show: deps check_vault_pass
 ifndef FILE
-	$(error FILE variable is not set, example 'make ansible_vault_edit FILE=environments/secrets.yml' or 'make ansible_vault_edit FILE=all')
+	$(error FILE variable is not set, example 'make ansible_vault_edit FILE=environments/secrets.yml' or 'make ansible_vault_show FILE=all')
 endif
 	@if [ "${FILE}" = "all" ] ; then \
 		${venv} && find environments/ inventory/ -name "*.yml" -and -not -path "*/.venv/*" -exec grep -l ANSIBLE_VAULT {} \+|\
