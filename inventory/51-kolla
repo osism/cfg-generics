@@ -253,6 +253,9 @@ compute
 [neutron-ovn-metadata-agent:children]
 compute
 
+[neutron-ovn-vpn-agent:children]
+network
+
 [neutron-server:children]
 control
 
