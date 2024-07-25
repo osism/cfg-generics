@@ -22,11 +22,6 @@ phpmyadmin_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['phpmyadmin']
 postgres_tag: "{{ versions['postgres'] }}"
 postgres_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['postgres'] }}:{{ '{{' }} postgres_tag {{ '}}' }}"
 
-{% if 'postgres_upgrade' in versions -%}
-postgres_upgrade_tag: "{{ versions['postgres_upgrade'] }}"
-postgres_upgrade_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['postgres_upgrade'] }}:{{ '{{' }} postgres_upgrade_tag {{ '}}' }}"
-{% endif %}
-
 manager_redis_tag: "{{ versions['redis'] }}"
 manager_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} manager_redis_tag {{ '}}' }}"
 
