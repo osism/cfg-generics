@@ -4,9 +4,6 @@
 [netdata:children]
 generic
 
-[openstack_health_monitor:children]
-monitoring
-
 [prometheus_pushgateway:children]
 monitoring
 
