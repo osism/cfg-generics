@@ -2,6 +2,17 @@
 - secret:
     name: SECRET_CFG_GENERICS
     data:
+      DTRACK_API_KEY: !encrypted/pkcs1-oaep
+        - G5smX9QsYbeNIFZfn05lexkRJvaPTXCUON37hbZ1eqRxCKQ0rXcBmozke9n+gZ1KjSp2K
+          frwafm73H0QydTgnyc11vMaMH3jt74lOiCT2YlIMiNtN8zPs6kWRdj/Jqrq3Cww14NG7N
+          1j+TPXFI99eXyKNkif0t8ULRGYdxzdbYMJg6xg+W0Tnw6uBtIeH5h7gWcIdbkgkjcmI+2
+          8mNBk/sEFYOemWMGV08I18CooOrRuNFVbuxBeCOYnLb0cg1PezKy6LlQcrOOWf8flCEsx
+          DAD6fI/dYscgC3Xli/u35JMPhC2FceF9jaE06682s1VI/IzX14OJV0Gtht9Qv2DPP2E4U
+          qQnNT2+ZmJ1nVFDtLO0poOXD376SMhvzPRlIB+EkgMDXbDKY1rpO9TlSePRKqweKtTByO
+          Sf3KttN0lVRrsuEsFjIy3qUX8sVF/CVbQ8LP0U+DXwqiXXQabya+zFSZS8nPOVwBo7fcw
+          h/NgjITWFNjWRgt/sF109Kv+K4vC89u29mEc9neSn69Pd3gFJgNKiBKZC4Rr8Q9jEXP95
+          CWOAvjf+2qvfttnddC/kVAv5vPqKGEsHukvVzuj9NyNZ+9RJWDQAiHoBQhMzb34aJqPWx
+          h0CaSLgHE5sFECC2QiIZeN7mJO/X8P/JkgSUbVzvfbUpjRtX1mVKGv+EmZILRo=
       DOCKER_USERNAME: !encrypted/pkcs1-oaep
         - W9F3X9Ai9XKWOvPDmTlUy3gmgl866q76nYlKqlvxsUZJNHcPVlfA9P7yGEBEalc7a21NH
           4K/G3j9QgPpWNu3wD8xfLhNZgjWxtB5Om4Pp6OjYbMnczp4R9LxWvnJxhmmYka0dKqJnn
