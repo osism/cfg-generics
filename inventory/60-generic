@@ -33,7 +33,7 @@ generic
 generic
 
 [podman:children]
-manager
+generic
 
 [runc:children]
 generic
