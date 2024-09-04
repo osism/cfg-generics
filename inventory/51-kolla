@@ -358,11 +358,7 @@ monitoring
 monitoring
 
 [prometheus-cadvisor:children]
-compute
-control
-monitoring
-network
-storage
+generic
 
 [prometheus-elasticsearch-exporter:children]
 elasticsearch
@@ -383,11 +379,7 @@ prometheus-alertmanager
 mariadb
 
 [prometheus-node-exporter:children]
-compute
-control
-monitoring
-network
-storage
+generic
 
 [prometheus-openstack-exporter:children]
 monitoring
