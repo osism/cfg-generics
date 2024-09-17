@@ -31,10 +31,8 @@ shift
 
 if [[ $INSTALL_ANSIBLE == "true" ]]; then
     if [[ ! -e $VENV_PATH/bin/activate ]]; then
+        $VENV_PYTHON_BIN -m venv "$VENV_PATH"
 
-        command -v virtualenv >/dev/null 2>&1 || { echo >&2 "virtualenv not installed"; exit 1; }
-
-        virtualenv -p "$VENV_PYTHON_BIN" "$VENV_PATH"
         # shellcheck source=/dev/null
         source "$VENV_PATH/bin/activate"
         pip3 install -r requirements.txt
