@@ -16,6 +16,9 @@ netbox_image: "{{ '{{' }} docker_registry_netbox|default('quay.io') {{ '}}' }}/{
 nginx_tag: "{{ versions['nginx'] }}"
 nginx_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['nginx'] }}:{{ '{{' }} nginx_tag {{ '}}' }}"
 
+pgautoupgrade_tag: "{{ versions['pgautoupgrade'] }}"
+pgautoupgrade_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['pgautoupgrade'] }}:{{ '{{' }} pgautoupgrade_tag {{ '}}' }}"
+
 phpmyadmin_tag: "{{ versions['phpmyadmin'] }}"
 phpmyadmin_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['phpmyadmin'] }}:{{ '{{' }} phpmyadmin_tag {{ '}}' }}"
 
