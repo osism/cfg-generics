@@ -19,6 +19,7 @@ rabbitmq
 generic
 
 [frr:children]
+generic
 
 [hddtemp:children]
 generic
