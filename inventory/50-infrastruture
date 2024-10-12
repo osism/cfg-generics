@@ -67,7 +67,7 @@ manager
 [tang:children]
 manager
 
-[teleport_connect:children]
+[teleport:children]
 manager
 
 [traefik:children]
