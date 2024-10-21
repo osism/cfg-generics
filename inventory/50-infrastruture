@@ -73,6 +73,9 @@ manager
 [traefik:children]
 manager
 
+[wazuh_agent:children]
+generic
+
 [wireguard:children]
 manager
 
