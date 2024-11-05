@@ -4,6 +4,9 @@
 [netdata:children]
 generic
 
+[opentelemetry_collector:children]
+manager
+
 [prometheus_pushgateway:children]
 monitoring
 
