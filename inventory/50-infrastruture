@@ -40,9 +40,6 @@ manager
 [kubectl:children]
 manager
 
-[metering:children]
-manager
-
 [mirror:children]
 manager
 
