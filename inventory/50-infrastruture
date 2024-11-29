@@ -61,9 +61,6 @@ manager
 [squid:children]
 manager
 
-[tang:children]
-manager
-
 [teleport:children]
 manager
 
