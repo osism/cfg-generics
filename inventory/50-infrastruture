@@ -7,9 +7,6 @@ manager
 [cgit:children]
 manager
 
-[clevis:children]
-generic
-
 [dnsdist:children]
 manager
 
