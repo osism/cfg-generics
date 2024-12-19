@@ -19,11 +19,11 @@ if not MANAGER_VERSION:
 VERSIONS_URL = os.environ.get(
     "VERSIONS_URL",
     "https://raw.githubusercontent.com/osism/release/main/%s/base.yml"
-    % MANAGER_VERSION,  # noqa E501
+    % MANAGER_VERSION,
 )
 IMAGES_URL = os.environ.get(
     "IMAGES_URL",
-    "https://raw.githubusercontent.com/osism/release/main/etc/images.yml",  # noqa E501
+    "https://raw.githubusercontent.com/osism/release/main/etc/images.yml",
 )
 
 # load versions files from release repository
