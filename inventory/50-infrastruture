@@ -10,12 +10,6 @@ manager
 [dnsdist:children]
 manager
 
-[dragonfly_client:children]
-generic
-
-[dragonfly_server:children]
-manager
-
 [helper:children]
 manager
 
