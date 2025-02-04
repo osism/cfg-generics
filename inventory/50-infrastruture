@@ -10,6 +10,9 @@ manager
 [dnsdist:children]
 manager
 
+[dnsmasq:children]
+manager
+
 [helper:children]
 manager
 
