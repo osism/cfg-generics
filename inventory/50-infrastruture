@@ -16,6 +16,9 @@ manager
 [helper:children]
 manager
 
+[httpd:children]
+manager
+
 [k3s_all:children]
 k3s_master
 k3s_node
