@@ -70,5 +70,8 @@ generic
 [wireguard:children]
 manager
 
+[zot:children]
+manager
+
 [zuul:children]
 manager
