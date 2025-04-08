@@ -137,13 +137,15 @@ if MANAGER_VERSION != "latest":
             data = fp.read()
             if "openstack_version" in data:
                 print(
-                    "openstack_version is available in x. If the manager_version is"
+                    "openstack_version is available in environments/manager/configuration.yml."
+                    " If the manager_version is"
                     " not set to latest, this parameter should not be present there."
                     " Please check and remove the parameter."
                 )
             if "ceph_version" in data:
                 print(
-                    "ceph_version is available in x. If the manager_version is"
+                    "ceph_version is available in environments/manager/configuration.yml."
+                    " If the manager_version is"
                     " not set to latest, this parameter should not be present there."
                     " Please check and remove the parameter."
                 )
