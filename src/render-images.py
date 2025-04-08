@@ -36,6 +36,7 @@ images = yaml.full_load(r.text)
 
 # always use latest osism if manager version is latest
 if MANAGER_VERSION == "latest":
+    versions["docker_images"]["inventory_reconciler"] = "latest"
     versions["docker_images"]["osism"] = "latest"
 
 # prepare jinja2 environment
