@@ -31,10 +31,18 @@ manager_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }
 registry_tag: "{{ versions['registry'] }}"
 registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:{{ '{{' }} registry_tag {{ '}}' }}"
 
-osism_ansible_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
+{% if versions['osism_ansible'] == 'latest' -%}
+osism_ansible_tag: "{{ '{{' }} osism_ansible_version|default('latest') {{ '}}' }}"
+{%- else -%}
+osism_ansible_tag: "{{ versions['osism_ansible'] }}"
+{% endif %}
 osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
 
-osism_kubernetes_tag: "{{ '{{' }} manager_version|default('latest') {{ '}}' }}"
+{% if versions['osism_kubernetes'] == 'latest' -%}
+osism_kubernetes_tag: "{{ '{{' }} osism_kubernetes_version|default('latest') {{ '}}' }}"
+{%- else -%}
+osism_kubernetes_tag: "{{ versions['osism_kubernetes'] }}"
+{% endif %}
 osism_kubernetes_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_kubernetes'] }}:{{ '{{' }} osism_kubernetes_tag {{ '}}' }}"
 
 {% if versions['inventory_reconciler'] == 'latest' -%}
