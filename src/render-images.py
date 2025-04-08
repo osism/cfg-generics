@@ -34,6 +34,10 @@ versions = yaml.full_load(r.text)
 r = requests.get(IMAGES_URL)
 images = yaml.full_load(r.text)
 
+# always use latest osism if manager version is latest
+if MANAGER_VERSION == "latest":
+    images["osism"] = "latest"
+
 # prepare jinja2 environment
 
 loader = jinja2.FileSystemLoader(searchpath=".")
