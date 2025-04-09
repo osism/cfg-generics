@@ -44,12 +44,12 @@ if MANAGER_VERSION == "latest":
 if "osism_ansible" not in versions["docker_images"]:
     versions["docker_images"][
         "osism_ansible"
-    ] = "'{{' }} manager_version|default('latest') {{ '}}'"
+    ] = "{{ manager_version|default('latest') }}"
 
 if "osism_kubernetes" not in versions["docker_images"]:
     versions["docker_images"][
         "osism_kubernetes"
-    ] = "'{{' }} manager_version|default('latest') {{ '}}'"
+    ] = "{{ manager_version|default('latest') }}"
 
 # prepare jinja2 environment
 
