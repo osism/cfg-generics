@@ -76,6 +76,10 @@ if [[ $INSTALL_ANSIBLE_ROLES == "true" ]]; then
     ansible-galaxy collection install -f "${ANSIBLE_PLAYBOOKS_MANAGER_SOURCE},${ANSIBLE_PLAYBOOKS_MANAGER_VERSION}"
 fi
 
+if [[ "$playbook" == "noop" ]]; then
+    exit 0
+fi
+
 if [[ \
       $(head -1 secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
       $(head -1 ../secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
