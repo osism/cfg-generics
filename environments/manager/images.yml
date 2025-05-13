@@ -13,6 +13,9 @@ ara_server_mariadb_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['mari
 netbox_tag: "{{ versions['netbox'] }}"
 netbox_image: "{{ '{{' }} docker_registry_netbox|default('quay.io') {{ '}}' }}/{{ images['netbox'] }}:{{ '{{' }} netbox_tag {{ '}}' }}"
 
+netbox_redis_tag: "{{ versions['redis'] }}"
+netbox_redis_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['redis'] }}:{{ '{{' }} netbox_redis_tag {{ '}}' }}"
+
 nginx_tag: "{{ versions['nginx'] }}"
 nginx_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['nginx'] }}:{{ '{{' }} nginx_tag {{ '}}' }}"
 
