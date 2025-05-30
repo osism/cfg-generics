@@ -80,14 +80,22 @@ traefik_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['traefik'] }}:{{
 {% if manager_version == 'latest' -%}
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default('quincy') {{ '}}' }}"
 {%- else -%}
+{% if 'ceph-ansible' in versions %}
+ceph_ansible_tag: "{{ versions['ceph_ansible'] }}"
+{% else %}
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version) {{ '}}' }}"
+{% endif %}
 {% endif %}
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
 {% if manager_version == 'latest' -%}
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default('2024.1') {{ '}}' }}"
 {%- else -%}
+{% if 'kolla-ansible' in versions %}
+kolla_ansible_tag: "{{ versions['kolla_ansible'] }}"
+{% else %}
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version) {{ '}}' }}"
+{% endif %}
 {% endif %}
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
