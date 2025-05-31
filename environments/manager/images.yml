@@ -84,7 +84,7 @@ ceph_ansible_tag: "{{ '{{' }} ceph_version|default('quincy') {{ '}}' }}"
 ceph_ansible_tag: "{{ versions['ceph_ansible'] }}"
 {%- else -%}
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version) {{ '}}' }}"
-{% endif -%}
+{% endif %}
 {% endif -%}
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
@@ -95,7 +95,7 @@ kolla_ansible_tag: "{{ '{{' }} openstack_version|default('2024.2') {{ '}}' }}"
 kolla_ansible_tag: "{{ versions['kolla_ansible'] }}"
 {%- else -%}
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version) {{ '}}' }}"
-{% endif -%}
+{% endif %}
 {% endif -%}
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
