@@ -38,35 +38,35 @@ registry_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['registry'] }}:
 osism_ansible_tag: "{{ '{{' }} osism_ansible_version|default('latest') {{ '}}' }}"
 {%- else -%}
 osism_ansible_tag: "{{ versions['osism_ansible'] }}"
-{% endif %}
+{% endif -%}
 osism_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_ansible'] }}:{{ '{{' }} osism_ansible_tag {{ '}}' }}"
 
 {% if versions['osism_kubernetes'] == 'latest' -%}
 osism_kubernetes_tag: "{{ '{{' }} osism_kubernetes_version|default('latest') {{ '}}' }}"
 {%- else -%}
 osism_kubernetes_tag: "{{ versions['osism_kubernetes'] }}"
-{% endif %}
+{% endif -%}
 osism_kubernetes_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['osism_kubernetes'] }}:{{ '{{' }} osism_kubernetes_tag {{ '}}' }}"
 
 {% if versions['inventory_reconciler'] == 'latest' -%}
 inventory_reconciler_tag: "{{ '{{' }} inventory_reconciler_version|default('latest') {{ '}}' }}"
 {%- else -%}
 inventory_reconciler_tag: "{{ versions['inventory_reconciler'] }}"
-{% endif %}
+{% endif -%}
 inventory_reconciler_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['inventory_reconciler'] }}:{{ '{{' }} inventory_reconciler_tag {{ '}}' }}"
 
 {% if versions['osism'] == 'latest' -%}
 osism_tag: "{{ '{{' }} osism_version|default('latest') {{ '}}' }}"
 {%- else -%}
 osism_tag: "{{ versions['osism'] }}"
-{% endif %}
+{% endif -%}
 osism_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism'] }}:{{ '{{' }} osism_tag {{ '}}' }}"
 
 {% if versions['osism'] == 'latest' -%}
 osism_netbox_tag: "{{ '{{' }} osism_version|default('latest') {{ '}}' }}"
 {%- else -%}
 osism_netbox_tag: "{{ versions['osism'] }}"
-{% endif %}
+{% endif -%}
 osism_netbox_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism_netbox'] }}:{{ '{{' }} osism_netbox_tag {{ '}}' }}"
 
 vault_tag: "{{ versions['vault'] }}"
@@ -82,10 +82,10 @@ ceph_ansible_tag: "{{ '{{' }} ceph_version|default('quincy') {{ '}}' }}"
 {%- else -%}
 {% if 'ceph_ansible' in versions -%}
 ceph_ansible_tag: "{{ versions['ceph_ansible'] }}"
-{% else %}
+{%- else -%}
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default(manager_version) {{ '}}' }}"
-{% endif %}
-{% endif %}
+{% endif -%}
+{% endif -%}
 ceph_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['ceph_ansible'] }}:{{ '{{' }} ceph_ansible_tag {{ '}}' }}"
 
 {% if manager_version == 'latest' -%}
@@ -93,9 +93,9 @@ kolla_ansible_tag: "{{ '{{' }} openstack_version|default('2024.2') {{ '}}' }}"
 {%- else -%}
 {% if 'kolla_ansible' in versions -%}
 kolla_ansible_tag: "{{ versions['kolla_ansible'] }}"
-{% else %}
+{%- else -%}
 kolla_ansible_tag: "{{ '{{' }} openstack_version|default(manager_version) {{ '}}' }}"
-{% endif %}
-{% endif %}
+{% endif -%}
+{% endif -%}
 kolla_ansible_image: "{{ '{{' }} docker_registry_ansible|default('quay.io') {{ '}}' }}/{{ images['kolla_ansible'] }}:{{ '{{' }} kolla_ansible_tag {{ '}}' }}"
 
