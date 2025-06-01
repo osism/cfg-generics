@@ -75,7 +75,6 @@ vault_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['vault'] }}:{{ '{{
 traefik_tag: "{{ versions['traefik'] }}"
 traefik_image: "{{ '{{' }} docker_registry {{ '}}' }}/{{ images['traefik'] }}:{{ '{{' }} traefik_tag {{ '}}' }}"
 
-# image tag depends on CEPH_VERSION or OPENSTACK_VERSION
 {% if manager_version == 'latest' -%}
 ceph_ansible_tag: "{{ '{{' }} ceph_version|default('quincy') {{ '}}' }}"
 {% else -%}
