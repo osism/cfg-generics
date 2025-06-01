@@ -25,6 +25,8 @@ IMAGES_URL = os.environ.get(
     "IMAGES_URL",
     "https://raw.githubusercontent.com/osism/release/main/etc/images.yml",
 )
+IMAGES_TEMPLATE_PATH = os.environ.get("IMAGES_TEMPLATE_PATH", "images.yml")
+IMAGES_PATH = os.environ.get("IMAGES_PATH", "images.yml")
 
 # load versions files from release repository
 
@@ -58,7 +60,7 @@ environment = jinja2.Environment(loader=loader)
 
 # render images.yml
 
-template = environment.get_template("images.yml")
+template = environment.get_template(IMAGES_TEMPLATE_PATH)
 result = template.render(
     {
         "images": images,
@@ -66,5 +68,5 @@ result = template.render(
         "versions": versions["docker_images"],
     }
 )
-with open("images.yml", "w+") as fp:
+with open(IMAGES_PATH, "w+") as fp:
     fp.write(result)
