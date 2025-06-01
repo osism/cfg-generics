@@ -37,17 +37,33 @@
           2+rRLpef7j/V/tNGQQ9MfrmM5inGUF/FG8AdiM/+/ps12bDsE4JnPH6vyBmNlA=
 
 - job:
-    name: cfg-generics-tox-gilt
+    name: cfg-generics-tox-test-stable
     parent: tox
     vars:
-      BRANCH: "{{ zuul.branch }}"
-      tox_envlist: gilt
+      tox_envlist: test
+      tox_environment:
+        MANAGER_VERSION: "9.1.0"
+
+- job:
+    name: cfg-generics-tox-test-stable-legacy
+    parent: tox
+    vars:
+      tox_envlist: test
+      tox_environment:
+        MANAGER_VERSION: "9.0.0"
+
+- job:
+    name: cfg-generics-tox-test-latest
+    parent: tox
+    vars:
+      tox_envlist: test
+      tox_environment:
+        MANAGER_VERSION: "latest"
 
 - job:
     name: cfg-generics-tox-check
     parent: tox
     vars:
-      BRANCH: "{{ zuul.branch }}"
       tox_envlist: check
 
 - job:
@@ -72,15 +88,9 @@
     check:
       jobs:
         - cfg-generics-tox-check
-        - cfg-generics-tox-gilt
-        - check-shell-syntax
-        - flake8
-        - python-black
-        - yamllint
-    gate:
-      jobs:
-        - cfg-generics-tox-check
-        - cfg-generics-tox-gilt
+        - cfg-generics-tox-test-latest
+        - cfg-generics-tox-test-stable
+        - cfg-generics-tox-test-stable-legacy
         - check-shell-syntax
         - flake8
         - python-black
@@ -88,7 +98,9 @@
     periodic-daily:
       jobs:
         - cfg-generics-tox-check
-        - cfg-generics-tox-gilt
+        - cfg-generics-tox-test-latest
+        - cfg-generics-tox-test-stable
+        - cfg-generics-tox-test-stable-legacy
         - check-shell-syntax
         - flake8
         - python-black
