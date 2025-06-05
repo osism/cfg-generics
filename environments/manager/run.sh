@@ -93,6 +93,7 @@ if [[ ! -e id_rsa.operator ]]; then
         -i localhost, \
         -e @../secrets.yml \
         -e "keypair_dest=$(pwd)/id_rsa.operator" \
+        ${VAULT:+--vault-password-file "$VAULT"} \
         osism.manager.keypair "$@" || exit $?
 fi
 
@@ -114,6 +115,7 @@ if [[ $playbook == "k8s" || $playbook == "netbox" || $playbook == "traefik" ]]; 
         -e @configuration.yml \
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
+        ${VAULT:+--vault-password-file "$VAULT"} \
         osism.manager."$playbook" "$@" || exit $?
 elif [[ $playbook == "operator" ]]; then
     if [[ $ANSIBLE_ASK_PASS == "True" ]]; then
@@ -126,6 +128,7 @@ elif [[ $playbook == "operator" ]]; then
             -e @configuration.yml \
             -e @secrets.yml \
             -u "$ANSIBLE_USER" \
+            ${VAULT:+--vault-password-file "$VAULT"} \
             osism.manager."$playbook" "$@" || exit $?
     else
         ansible-playbook \
@@ -138,6 +141,7 @@ elif [[ $playbook == "operator" ]]; then
             -e @configuration.yml \
             -e @secrets.yml \
             -u "$ANSIBLE_USER" \
+            ${VAULT:+--vault-password-file "$VAULT"} \
             osism.manager."$playbook" "$@" || exit $?
     fi
 else
@@ -151,5 +155,6 @@ else
         -e @configuration.yml \
         -e @secrets.yml \
         -u "$ANSIBLE_USER" \
+        ${VAULT:+--vault-password-file "$VAULT"} \
         osism.manager."$playbook" "$@" || exit $?
 fi
