@@ -80,7 +80,9 @@ if [[ "$playbook" == "noop" ]]; then
     exit 0
 fi
 
-if [[ \
+if [[ -e .vault_pass ]]; then
+    VAULT=.vault_pass
+elif [[ \
       $(head -1 secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
       $(head -1 ../secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 || \
       $(head -1 ../infrastructure/secrets.yml | grep -v -q \$ANSIBLE_VAULT || echo 1) == 1 \
