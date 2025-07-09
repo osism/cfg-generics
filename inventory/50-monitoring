@@ -1,6 +1,9 @@
 ##########################################################
 # environment: monitoring
 
+[gnmic:children]
+manager
+
 [netdata:children]
 generic
 
