@@ -3,38 +3,70 @@
     name: SECRET_CFG_GENERICS
     data:
       DTRACK_API_KEY: !encrypted/pkcs1-oaep
-        - eu7kmcX0mY5B7mmTev0xBQUfFTU7335RbthWlWTLWdCwK/D+IfftoAwslv+bToP/Gb5k3
-          n2ieLc8N49l5p5htYqxKdatRNpV98fdCkUje0kLU08/bLdV3ByaWM5MERRZFDRldja+hq
-          /99uN+VTbYKSmVEfa2nXdMfK7a+83ck3fqxT7Rl1gfYEJo+XIWEu7aXFF2vtBr9o9hHH7
-          gvCxI0kvXwUCOHRHC9JwH4wpDsF8XdQjpPvHwlP3dEvyyWbqND09DzoCaq7ic5Ra2sndG
-          TctLtRuMoFV8Kp10MxPrswwRkF9rYARHGRxsdfLac0K/SFqQyFz+jZkXZT88ao+K/54uu
-          R/qb5Aef6AM7vXnaYIss1s5486wmnHQzw+AQqP11aXuCLTlyCUcBIKNXt9wnoC6Kv86JK
-          dF/2zzLAFtQYGZjFnc2f+fMn5Qr1lKtcw40YoWVP0Vd5U8n6xGHcCGM7up7tW/2Vpu+LE
-          A1SVhlITVvVTuE3Q1qSAFt2pNQ8DYmSTxjI2qR/b5qvEWYxIqlHc4LbLJT96otq1OkwSi
-          0acOaMGxp0n+PZSIcgPZvooEpwqqRGu0S1uHwJmRaeztAv4lkFOSmYNmL3Bv0PoFjcjpM
-          XMROuZoxqH5H6Ocbnn+1WhmrHNsHdbWEXoqPxphfNkI36KavLgiO5iKwqHI79s=
+        - U+EGSF2Uqad33IeP0O/f6+vwdxzHmLal7ID7J5GNxkPxsWHhl5Ic5Y4MF4U1e3m3bq4SG
+          xYyjprclj5B84lgLQX5S9dadwf4U8exO6EJ7dTXoJIUCIdBCqCWZ7MIfLKsv0aQ1zHkO8
+          6pL3jFvlTcKo0pKyCRcz9b3+CZIXpACaw6vFntTmH/AExk6jeGylWA5eEatI7wcivDd8A
+          y57XmMO/iYJs0kIQTGEI3o+O6Hy2s4uwSId7zUtTibeKE5qOFEqI2lCZYiWyz2v5618Ow
+          ehSo/o+jRsSkhPDDRA1rNfo7slGp+rgSd9BGb4pBOrn/BtinJZlWXu8sbHZoj3QYiXwyu
+          YImIupxbSotF/u47NSwqfsbQ6Tjl9m00q7tPF6qdbIeX0iDTdodXzliHBoJgxx1TXuILv
+          NbS53xxY5T65qc0shZTtfQBrofe34Dh63x1JkdjmKaT4gETbYBCMuIJ9zzTjuL2Sn7Ssm
+          h9MA4m+M9qWtN61iMJmsdvZ0h3JtE8SHOKTYWWThffJvgRwTYzNO3nY+YLtGvRrJCBbOW
+          cUNKuef8mnTJlmuMSAu9VXGxjy68/tzD1bIaCJ/qy/bcMBEN3iYDS/O/UVDK/9P8o2k6/
+          JN379zjXoQm3x9yw/sbrLdxjDmibBPmx6owNi2bbT+615CtSTXFVU/q6ib8L/I=
       DOCKER_USERNAME: !encrypted/pkcs1-oaep
-        - NYq4Q6VT0GZxA0BiN8mbzJgavCVd8mJ2Q1mhqARk0ToIg+KKqxRQk8AJcUXg8RatX+LkM
-          /ctjdCFCxRPakdP0L4K6C2SQJIj68wA5B3bvcd1ZKN9VFd/VRvcMtDqaWRYkkx/5yaKFy
-          T+fVAB0WfB4U7OtRndc8rCTKgtIw2X4D++FV25ZC4G2DOcVwkBuAZctGKTiv+11B2tyl9
-          s8gdXkzmNMmxufOl/3rmKHZHcGhYQVOglEg4TR29Wtpf/LfSOKXdzlIuf6AC6zGN3OSXp
-          nXOskWlL/WLVnBpNWAYoizf/gRKrBineU2qVULQIV9DYUkjIJzjRGZGSbm6pirI3hDDqq
-          j0LdAedSC8e9CrsXiIsg4QcdSOvMVwjAOhMNGL8RvwJ1j7HGiYkZg/9g0jdJEkWIRm3A7
-          A+o+Wd09nuGuB043nF6evSD/0L+sRJqSdyquTQn9NTK/mE1/6G6RlzSD5AnnDvAeK2KN3
-          5mm3oYZktx3hX55ftzWruvxAnPtXTHubs+9LHGfDFv/dwhg2B38GajPMJ3MV+9eQrZ/QV
-          2iUO6wKt7agvOD2guXXQ9Hdep6qcjn6mHekTP86QQn69looQ6TvdJtLdMyTduDYmNFeCu
-          rCw2vJmkqI+xglinyCaIwNjvYF5Hc/wCrDNhqzJW/BvnsA23gpveDbjFGc25xs=
+        - en1LoNpvpp6BEszz+NxaQYZFSU/Ro0wxejOt9joBebJhfDdno9GmxAE4dS2AtNZVB+Poj
+          wKeOFop7OViZ0B4DO6YKrexTeop3kbPWXY1tm8cNBKHHcg46DUAanQ4gIDD1E04p4QQVs
+          2Seo0rhZBjX9sK9vA6O24w7xti6Oxk7dEOh32T2LsKmX6sCT5Ug/asjQthcf8d/ccS0Wp
+          2fskbQ6D6drLZ27fywRD1PSC07laIaOx8APFX4FsCQjrk/HsnRT0iUN8dpzoxI8RokyNx
+          J5bhnJkDo4nJsftFxyt/AG1SNJ+YcbaOEaHOVIr0P7+GB8wYh9TtAEjgIE7696RHwmDEJ
+          OQQZ9FuDfzFl1tnU3U0fj8zZgf4IUsNHo7lpRj6bL9N59nu34lJsHX8F7s31wEYoC7gpP
+          VvBK41VnZa3W2qZOiu2CGUadlkyUCqpKRzKVV7NpX36wN4J01orM5Su/BT+5jqjtuyVvz
+          B8iTQ+adkgw6ZUSsWGZ8DHfT4vMGct47hwS+g/czlq2onCmtOxoaV18tWM2MqGpMzJQLo
+          RbkIPM+srn0KWLXYKyM15gEjWUHyxc7ybrUeGzrJf0tSXHeufmDBsIDc2EQ2BfURlmXsM
+          CpaRWh1oMmkbgZmS4pf+EnlpDfKquH4tzFUPwRG0vyy/R5fHwgrzbsqMy2kKbo=
       DOCKER_PASSWORD: !encrypted/pkcs1-oaep
-        - DFpw6jl31Ey89P9ljb3H2od9obNF+g6+mnhY5z/7oF5YFoczalpsYGiccamn9v2gSUBvf
-          gFMWLNNJNHThfnpAGigdRDefkYTH1oHAIq0kdqrMYHmOT3wNTGrcZUTBD4lLSu/rtD/pK
-          Sd94We9GzSMR4jHL/yuJ/gWLADoVV2Z+JdkzqjUAOP4LOcA4D9jQlkKBURktdIdAfaG8E
-          uAUVKbV4KrUwCxG4u+sgkEYcFGG0a5jTgg6+hA9GVLOcYSiV3WpzCJVvmkcmUq7k3wI7o
-          j7938zFAjKXIgJgKyASWCAgCJ3fcxPkKCmwdUbG/IS9piVKZKIbaWcAGCrYa7rEW1f3xI
-          b4/IwVa+9vR6ci3JOV5+qGsa2vJUcBc4VghpDBs5nCfjhjAugCVZTE0hVssCrcXNH6R+q
-          qk4xdonlc96GAstAp7uIdA0rNZgWWiT58EVzHLZresGxh3T8gIDCBZZYFh50aUHaZUO6+
-          +P9yviC2gmbPVtPs2h/iXPh0t4xxB/8M40A+w8/0IeezrAkfe5NL7MgeWlMKCfG90BOz1
-          3/cRiaMr9gdN/YyEtZTNREapWy/m9L81VVlOFQW9Fn8/wEztG5hEcHq/L4F28dBV0vu8t
-          2+rRLpef7j/V/tNGQQ9MfrmM5inGUF/FG8AdiM/+/ps12bDsE4JnPH6vyBmNlA=
+        - emkc4YHaxIzUQSGzi7YRFrH1clqFAzAKUbLlJPlg8sk8yChUzXpl/HF6gu55oPJUxJ9UN
+          RxgnHsoIKeErqcxBI+VFFnB5irEC6VMAGR0d8K2aM3BfCmGADfgCycWyUX612twtO+Y0G
+          6nliA6tzc8U3zL/isAlgWKQXRWaxUEDAkvQBwVHxlXGTUdi75UDSe7UHCzmMkngDlIMqY
+          rQMf6x86ugAIUikSvmPaSYDiIcbBmic6PnhzcY2WFVrk+ltzp1XAFSP9C0LwAIY8il57q
+          0IkEInFbXBiwBN1mzplIM1APic4O16gVqG+0eYelIz46j6GAxVVJJ+r5OGrwdfQbJ14Wn
+          e6fQOS64AS13OWG5QT3hepoL/r4Hnt3oHL8YPTnAoAeIKXMj5BtKqy9Bby6q8Q2FQudTx
+          fAYBTyfyc7MmbRztqJABLiBacqviQLgMjoKg1ZSnUCTtAXyy/Is9dWdFyto2XD5MgWi2n
+          ZJIbhd4c0/qUlGjwZyOfeMF3srM8bbH/n0QeEn4d1mIP7c3LYUWFDdKY1uQTrHxSejCc6
+          c9tEEFvTh+fiD4dD7MSDsUe2aK+xVOQ+mihDSdP5LE8DJQc4bjBgPt/Afdlh83MBBNBQ3
+          KeeXffIzxqx+Zg3RFfPAu701fheIN3ulp6D2unihnOPRhL+3CbM2lLEYxTXamg=
+      COSIGN_PASSWORD: !encrypted/pkcs1-oaep
+        - XUuhSVCcguSzi+U017vVN1GLs1CPHqhy6YkGq2KXgVm72ne87K93xYUqWbQLy1NeJU9dF
+          Z8UojAKiJ50pht7lgBailA5b7YScCwxuCKQKacvS76yCZiiR0tqTeR20BZ1anYhM8CfGT
+          g0QIWQU23nHhXLmi+MM4ohQHsXzt/w5accu/JYlHjX7YnPI2h79UoD+JCnoJCBgzvHp9b
+          whs9iBdhBMkrXLLOU6IOFbnNgOc8V5qqK2kATy1GLvX5LYMbJlKer2SmI8skMBB+qJJHm
+          2O2szBYSl0W3oWzZC1pOijiXh0zLIONruH9n/B1Hb4WDOsrD4a2+nGxqU6MBqsR0PCmnZ
+          e6f/rV0PH/tWfZAbuxv0DVzvyT0ASpnLWOHlglCPBoFQXzlqAXE0TNlT+OuJKmN98G/2c
+          5E2zcU0u2ncL06vpH51HQuNHX05psifpq9SxIn5aHusMlBphXLErxtwgM/vYQ1U8rQ00J
+          2o8LQpjC4wpfdoNui7aprR1dbrwdqOKjZ4NG40E955TpDI/MvUj5hydKbl6ngL7E3S321
+          NceO5/miEcSPk6MTGZrS9qiPK8dHQr75LXhC9erH/XDg1+4gVxg/D5ZJnRjLZ2fAhyQID
+          eqHemeudyfg7Spp0VTbt8DP4N1ZSVn/Rkkcr7tVSvKJyyWh3irp2o4AAH8j1hM=
+      COSIGN_PRIVATE_KEY: !encrypted/pkcs1-oaep
+        - ImzEdBbCjrmoiNm6Xyae6rqmn2nUaifVqjkfZLgJAcU5liIyzn6q3FR021j876I4pfirt
+          dRodf8dTSj/VCBCJ/Vbfc+6cVW0SHDZE1GOkH82Q3HrfWED1hQxbAwsEjFoTlg++euErk
+          ui9EDAzNm8Md024HDlEDk5bDrk4cW4Um6k/VLjcH+cDuVQS3CHKrh0LusKGvFQnNbjQb7
+          z8pHTiPJbb/UiFyTV2xqQdO8jAnIbOxDvRELHWVpTBSeT0L5CNFPBCwexfgPy2KxRAbcY
+          sq/tAjpie/OhI2tkfr287ICHbZJIPxix+s0XE3buJM1IHkvrskOUwip9TVFDa0wsywWgQ
+          JXARoHd7h+wDASIh1s2Yj4+Dg/+gt2+C62XCGS7UxKqIzrYKl2k6w2rg6G6xQqW1oPpKP
+          X/J/1f291lgIpu/jmH09xOB3CdaIedQ5QPeP+HGpbrH5KYV5rvVG10efoFCVc2nZObBxJ
+          iQxwY1TYVscplz3vylqEjfSHUPJgJGi0vrHksMP+OZOVLVwzfYX/RQ+eIzzqpfmbT8R+s
+          9h2mUpeoiN7Vr+QpaJiXUFgk+E+A+OK9xFWqFvB62g9YoUEHDRxvXmCC6wOYvLaY6bKqX
+          cqtGla1Jv96PmW9gq+ulaNo+33JV4xsta3YlUEIwqfi0ApI31yZ38lgQOwsR0M=
+        - oZvCyRZYUGzPpJoIBGVhKDRGDlAYZ5A+qIWBsorfuytGLDbWf8voy8i9NJuBJKgebws/t
+          ui6ZgZrPLbJzPcE5XSZnjiwrutEy3uCkDLN+atm5x4fNldCaPFAvWvzliTZ01wij9i7Vt
+          t1oaPr8bPmz3U6ZX+E5aFW2geJ99kktvssHXl5hj4oyu/kBlhtwsLyoZjc2h3DQ4kN1Pg
+          HYEqB/qGW1bBb4Ji6oAUVJkiNLGf2GY1IJhT96fGwvELfw+lgXUfIXomCy0WWLH4oOyzJ
+          /q+UcWb0zjsCTkGQk/vaQrxJrXNxt8kkmV4Gu2xjrv1k1ZLkSQQkisxKhgSyswJig2bio
+          jzHlEe/3oBI1XT2L65wDe/LruO4epvWe2/KxE0CdelFFUMNAAw9gK8d+GzA6nzzQd9h5n
+          HI2xY20ijCn1n3hP4amp7BBWaJQSl/1k9SlVhnRY/O+zvMQ54vG2GE/VjEiUaPuezqvxx
+          g3gnF5/1Ridb24gL9cZUOMb8QwFVvx29i7v+pavzmqWILjipDgnBnen0bFt2lraqoK7z4
+          vIGIOdGVcs/l4JP+tZWxBkctQBH7Ed0y9mwwDoDZKWrEnh6pEIfnEqvPtPPPGN8U3KPRt
+          abFkQS6vxKXnBRDrZqx80EBuZryR134WTs8sItmM7Hag8yNZvihxKmwRNXu43Q=
 
 - job:
     name: cfg-generics-tox-test-stable
