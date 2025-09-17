@@ -63,6 +63,13 @@ osism_tag: "{{ versions['osism'] }}"
 osism_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism'] }}:{{ '{{' }} osism_tag {{ '}}' }}"
 
 {% if versions['osism'] == 'latest' -%}
+osism_frontend_tag: "{{ '{{' }} osism_version|default('latest') {{ '}}' }}"
+{% else -%}
+osism_frontend_tag: "{{ versions['osism'] }}"
+{% endif -%}
+osism_frontend_image: "{{ '{{' }} docker_registry_ansible {{ '}}' }}/{{ images['osism_frontend'] }}:{{ '{{' }} osism_frontend_tag {{ '}}' }}"
+
+{% if versions['osism'] == 'latest' -%}
 osism_netbox_tag: "{{ '{{' }} osism_version|default('latest') {{ '}}' }}"
 {% else -%}
 osism_netbox_tag: "{{ versions['osism'] }}"
