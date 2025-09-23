@@ -339,6 +339,9 @@ ovn-database
 [ovn-northd:children]
 ovn-database
 
+[ovn-sb-db-relay:children]
+ovn-database
+
 [ovn-sb-db:children]
 ovn-database
 
